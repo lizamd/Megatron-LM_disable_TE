@@ -50,7 +50,7 @@ def model_provider(pre_process=True, post_process=True) -> Union[GPTModel, megat
             transformer_layer_spec = import_module(args.spec)
         else:
             # transformer_layer_spec = get_gpt_layer_with_transformer_engine_spec(args.num_experts, args.moe_grouped_gemm)
-            pass
+            assert False, "Not implemented yet"
 
         model = GPTModel(
             config=config,

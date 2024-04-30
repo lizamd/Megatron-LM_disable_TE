@@ -80,20 +80,20 @@ def get_gpt_layer_local_spec(num_experts: int = None, moe_grouped_gemm: bool = F
 def _get_mlp_module_spec(
     use_te: bool = False, num_experts: int = None, moe_grouped_gemm: bool = False
 ) -> ModuleSpec:
-    # if num_experts is None:
-    #     # Dense MLP w/ or w/o TE modules.
-    #     return ModuleSpec(
-    #         module=MLP,
-    #         submodules=MLPSubmodules(
-    #             linear_fc1=TELayerNormColumnParallelLinear if use_te else ColumnParallelLinear,
-    #             linear_fc2=TERowParallelLinear if use_te else RowParallelLinear,
-    #         ),
-    #     )
-    # else:
+    if num_experts is None:
+        # Dense MLP w/ or w/o TE modules.
+        return ModuleSpec(
+            module=MLP,
+            submodules=MLPSubmodules(
+                linear_fc1=ColumnParallelLinear,
+                linear_fc2=RowParallelLinear,
+            ),
+        )
+    else:
     # SwitchMLP based MoE with modules in megatron core.
-    return ModuleSpec(
-        module=MoELayer,
-        submodules=MLPSubmodules(linear_fc1=ColumnParallelLinear, linear_fc2=RowParallelLinear,)
-        if not moe_grouped_gemm
-        else None,
-    )
+        return ModuleSpec(
+            module=MoELayer,
+            submodules=MLPSubmodules(linear_fc1=ColumnParallelLinear, linear_fc2=RowParallelLinear,)
+            if not moe_grouped_gemm
+            else None,
+        )
