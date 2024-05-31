@@ -556,7 +556,7 @@ class ParallelAttention(MegatronModule):
                 query_projection_size + 2 * kv_projection_size,
                 config=config,
                 init_method=config.init_method,
-                bias=args.add_bias_linear,
+                bias=args.add_bias_linear or args.add_qkv_bias_linear,
                 gather_output=False)
         else:
             assert attention_type == AttnType.cross_attn
@@ -570,7 +570,7 @@ class ParallelAttention(MegatronModule):
                 query_projection_size,
                 config=config,
                 init_method=config.init_method,
-                bias=config.add_bias_linear,
+                bias=config.add_bias_linear or args.add_qkv_bias_linear,
                 gather_output=False)
 
             self.key_value = tensor_parallel.ColumnParallelLinear(
@@ -578,7 +578,7 @@ class ParallelAttention(MegatronModule):
                 2 * kv_projection_size,
                 config=config,
                 init_method=config.init_method,
-                bias=config.add_bias_linear,
+                bias=config.add_bias_linear or args.add_qkv_bias_linear,
                 gather_output=False)
 
         self.core_attention = CoreAttention(self.layer_number, config,

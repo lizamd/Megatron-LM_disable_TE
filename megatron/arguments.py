@@ -927,6 +927,8 @@ def _add_training_args(parser):
     group.add_argument('--disable-bias-linear', action='store_false',
                        help='Disable bias in the linear layers',
                        dest='add_bias_linear')
+    group.add_argument('--add-qkv-bias-linear', action='store_true',
+                       help='use bias in the qkv linear layers')
     group.add_argument('--optimizer', type=str, default='adam',
                        choices=['adam', 'sgd'],
                        help='Optimizer function')
@@ -969,6 +971,10 @@ def _add_training_args(parser):
                        help='When using manual garbage collection, disable '
                        'garbage collection at the start and the end of each '
                        'evaluation run.', dest='manual_gc_eval')
+    group.add_argument('--no-torch-compile',
+                       action='store_false',
+                       help='Disable using torch.compile to speedup the model.',
+                       dest='torch_compile')
 
     return parser
 
@@ -1276,7 +1282,8 @@ def _add_data_args(parser):
                                 'SentencePieceTokenizer',
                                 'GPTSentencePieceTokenizer',
                                 'Llama2Tokenizer',
-                                'NullTokenizer'],
+                                'NullTokenizer',
+                                'HFTokenizer'],
                        help='What type of tokenizer to use.')
     group.add_argument('--tokenizer-model', type=str, default=None,
                        help='Sentencepiece tokenizer model.')

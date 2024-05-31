@@ -506,6 +506,17 @@ def setup_model_and_optimizer(model_provider_func,
         if args.fp16:
             optimizer.reload_model_params()
 
+    if args.torch_compile:
+        import torch
+        if args.tensor_model_parallel_size > 1:
+            import torch._dynamo
+            torch._dynamo.config.suppress_errors = True
+        new_model = []
+        for model_module in model:
+            model_module = torch.compile(model_module, mode="max-autotune-no-cudagraphs")
+            new_model.append(model_module)
+        model = new_model
+
     return model, optimizer, opt_param_scheduler
 
 
@@ -762,6 +773,9 @@ def training_log(loss_dict, total_loss_dict, learning_rate, iteration,
                     wandb_writer.log({'throughput': throughput}, iteration)
         log_string += ' learning rate: {:.3E} |'.format(learning_rate)
         log_string += ' global batch size: {:5d} |'.format(batch_size)
+        free_gpu_memory, total_gpu_memory = torch.cuda.mem_get_info()
+        mem_usages = 1 - free_gpu_memory / total_gpu_memory
+        log_string += ' mem usages: {:.4f} |'.format(mem_usages)
         for key in total_loss_dict:
             if key not in [advanced_iters_key, skipped_iters_key,
                            nan_iters_key]:
