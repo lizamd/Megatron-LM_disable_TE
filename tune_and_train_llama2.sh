@@ -48,6 +48,6 @@ do
         time_per_iteration=$(grep -Eo 'elapsed time per iteration: [^|]*' $TRAIN_LOG | sed -E 's/.*elapsed time per iteration: ([0-9\.]+).*/\1/'  | head -1)
         samples_per_sec=$(python -c "print($BS*1000/$time_per_iteration)")
         mem_usages=$(grep -Eo 'mem usages: [^|]*' $TRAIN_LOG | sed -E 's/.*mem usages: ([0-9\.]+).*/\1/'  | head -1)
-        echo "MODEL_SIZE: $MODEL_SIZE MBS: $MBS BS: $BS TP: $TP PP: $PP SEQ_LENGTH: $SEQ_LENGTH ZERO: 2 samples/s: $samples_per_sec throughput: $throughput mem usages: $mem_usages"
+        echo "MODEL_SIZE: $MODEL_SIZE MBS: $MBS BS: $BS TP: $TP PP: $PP SEQ_LENGTH: $SEQ_LENGTH samples/s: $samples_per_sec throughput: $throughput mem usages: $mem_usages"
     done
 done
