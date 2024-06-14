@@ -62,8 +62,8 @@ fi
 MODEL_SIZE="${MODEL_SIZE:-7}"
 TP="${TP:-1}"
 PP="${PP:-1}"
-MBS="${MBS:-12}"
-BS="${BS:-1056}"
+MBS="${MBS:-4}"
+BS="${BS:-288}"
 SEQ_LENGTH="${SEQ_LENGTH:-2048}"
 TOTAL_ITERS="${TOTAL_ITERS:-6}"
 
