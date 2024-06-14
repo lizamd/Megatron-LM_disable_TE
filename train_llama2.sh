@@ -165,8 +165,7 @@ EXTRA_ARGS="
     --group-query-attention \
     --num-query-groups $NUM_GROUPS \
     --no-gradient-accumulation-fusion \
-    --use-distributed-optimizer \
-    --use-flash-attn
+    --use-distributed-optimizer
 "
 
 if [ "$NO_TORCH_COMPILE" -eq 1 ]; then
