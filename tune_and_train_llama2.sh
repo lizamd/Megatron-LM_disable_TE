@@ -16,7 +16,7 @@ MODEL_SIZE=7
 SEQ_LENGTH=2048
 # SEQ_LENGTH=4096
 
-for MBS in 12;
+for MBS in 6;
 do
     rm -f *.csv
 
@@ -36,7 +36,7 @@ do
     mv full_tuned*.csv $ROCBLAS_DIR
     # =============== search =============== #
 
-    for VBS in 512;
+    for VBS in 288;
     do
         rm -f *.csv
 
