@@ -79,17 +79,17 @@ if [[ $MODEL_SIZE -eq 7 ]]; then
         SEQ_LENGTH=$SEQ_LENGTH
         MAX_POSITION_EMBEDDINGS=$MAX_POSITION_EMBEDDINGS
         NUM_KV_HEADS=32 # llama2 70B uses GQA
-elif [[ $MODEL_SIZE -eq 14 ]]; then
+elif [[ $MODEL_SIZE -eq 13 ]]; then
         HIDDEN_SIZE=5120 # e.g. llama-13b: 5120
-        FFN_HIDDEN_SIZE=13696 # e.g. llama-13b: 13824
+        FFN_HIDDEN_SIZE=13824 # e.g. llama-13b: 13824
         NUM_LAYERS=40 # e.g. llama-13b: 40
         NUM_HEADS=40 # e.g. llama-13b: 40
         SEQ_LENGTH=$SEQ_LENGTH
         MAX_POSITION_EMBEDDINGS=$MAX_POSITION_EMBEDDINGS
         NUM_KV_HEADS=40 # llama2 70B uses GQA
-elif [[ $MODEL_SIZE -eq 72 ]]; then
+elif [[ $MODEL_SIZE -eq 70 ]]; then
         HIDDEN_SIZE=8192 # e.g. llama-13b: 5120
-        FFN_HIDDEN_SIZE=24576 # e.g. llama-13b: 13824
+        FFN_HIDDEN_SIZE=28672 # e.g. llama-13b: 13824
         NUM_LAYERS=80 # e.g. llama-13b: 40
         NUM_HEADS=64 # e.g. llama-13b: 40
         NUM_KV_HEADS=64 # llama2 70B uses GQA
