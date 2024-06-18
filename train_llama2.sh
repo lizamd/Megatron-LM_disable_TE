@@ -92,7 +92,7 @@ elif [[ $MODEL_SIZE -eq 70 ]]; then
         FFN_HIDDEN_SIZE=28672 # e.g. llama-13b: 13824
         NUM_LAYERS=80 # e.g. llama-13b: 40
         NUM_HEADS=64 # e.g. llama-13b: 40
-        NUM_KV_HEADS=64 # llama2 70B uses GQA
+        NUM_KV_HEADS=8 # llama2 70B uses GQA
         SEQ_LENGTH=$SEQ_LENGTH
         MAX_POSITION_EMBEDDINGS=$MAX_POSITION_EMBEDDINGS
 else
