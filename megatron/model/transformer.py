@@ -361,17 +361,21 @@ class CoreAttention(MegatronModule):
         key_layer = key_layer.view(output_size[3],
                                    output_size[0] * output_size[1], -1)
 
-        # preallocting input tensor: [b * np, sq, sk]
-        matmul_input_buffer = mpu.get_global_memory_buffer().get_tensor(
-            (output_size[0]*output_size[1], output_size[2], output_size[3]),
-            query_layer.dtype, "mpu")
+        ## preallocting input tensor: [b * np, sq, sk]
+        #matmul_input_buffer = mpu.get_global_memory_buffer().get_tensor(
+        #    (output_size[0]*output_size[1], output_size[2], output_size[3]),
+        #    query_layer.dtype, "mpu")
 
-        # Raw attention scores. [b * np, sq, sk]
-        matmul_result = torch.baddbmm(
-            matmul_input_buffer,
-            query_layer.transpose(0, 1),   # [b * np, sq, hn]
-            key_layer.transpose(0, 1).transpose(1, 2),  # [b * np, hn, sk]
-            beta=0.0, alpha=(1.0/self.norm_factor))
+        ## Raw attention scores. [b * np, sq, sk]
+        #matmul_result = torch.baddbmm(
+        #    matmul_input_buffer,
+        #    query_layer.transpose(0, 1),   # [b * np, sq, hn]
+        #    key_layer.transpose(0, 1).transpose(1, 2),  # [b * np, hn, sk]
+        #    beta=0.0, alpha=(1.0/self.norm_factor))
+
+        matmul_result = torch.bmm(
+                query_layer.transpose(0, 1),
+                key_layer.transpose(0, 1).transpose(1, 2)) * (1.0/self.norm_factor)
 
         # change view to [b, np, sq, sk]
         attention_scores = matmul_result.view(*output_size)
