@@ -971,21 +971,49 @@ def train(forward_step_func, model, optimizer, opt_param_scheduler,
                                      opt_param_scheduler)
         num_microbatches = get_num_microbatches()
         update_num_microbatches(args.consumed_train_samples, consistency_check=True)
-
         args.curr_iteration = iteration
-        loss_dict, skipped_iter, grad_norm, num_zeros_in_grad = \
-            train_step(forward_step_func,
-                       train_data_iterator,
-                       model,
-                       optimizer,
-                       opt_param_scheduler,
-                       config)
-        iteration += 1
-        batch_size = mpu.get_data_parallel_world_size() * \
-                     args.micro_batch_size * \
-                     get_num_microbatches()
-        args.consumed_train_samples += batch_size
-        num_floating_point_operations_so_far += num_floating_point_operations(args, batch_size)
+#  adding torch profiler 
+        from torch.profiler import profile, record_function, ProfilerActivity
+        #manual_profile = True
+        manual_profile = False
+        if manual_profile and is_last_rank() and iteration > 0:
+            with profile(activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+                        record_shapes=True,
+                        with_flops=True,
+                        with_modules=True,
+                        profile_memory=True,
+                        with_stack=True) as prof:
+                loss_dict, skipped_iter, grad_norm, num_zeros_in_grad = \
+                    train_step(forward_step_func,
+                            train_data_iterator,
+                            model,
+                            optimizer,
+                            opt_param_scheduler,
+                            config)
+                # print(prof.key_averages().table(row_limit=10))
+            rank = torch.distributed.get_rank()
+            fname_prefix = f"train_step_iter{iteration}_rank{torch.distributed.get_rank()}"
+            prof.export_chrome_trace(f"{fname_prefix}-trace.json")
+            prof.key_averages().table(sort_by="self_cuda_time_total", row_limit=100)
+            print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=50))
+            with open(f"logs/summary_{rank}.txt", "w") as f:
+                 print(prof.key_averages().table(max_name_column_width=None, sort_by="self_cuda_time_total", row_limit=-1), file=f)
+           
+            # profiler.export_stacks(os.path.join(profile_dir, 'profile_stacks.txt'), 'self_cuda_time_total')
+        else:
+            loss_dict, skipped_iter, grad_norm, num_zeros_in_grad = \
+    train_step(forward_step_func,
+            train_data_iterator,
+            model,
+            optimizer,
+            opt_param_scheduler,
+            config)
+            iteration += 1
+            batch_size = mpu.get_data_parallel_world_size() * \
+                        args.micro_batch_size * \
+                        get_num_microbatches()
+            args.consumed_train_samples += batch_size
+            num_floating_point_operations_so_far += num_floating_point_operations(args, batch_size)
 
         # Logging.
         loss_scale = optimizer.get_loss_scale().item()

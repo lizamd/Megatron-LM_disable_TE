@@ -876,6 +876,13 @@ def _add_training_args(parser):
     group.add_argument('--disable-tp-comm-bulk-wgrad', action='store_false', 
                        help = 'Disables the Reduce-Scatter overlap with bprop weight gradient GEMM.',
                        dest='tp_comm_bulk_wgrad')
+        # torch profiling
+    group.add_argument('--torch-profiling', action='store_true',
+                    dest='torch_profiling',
+                    help='enable torch profiling')
+    group.add_argument('--trace-dir', type=str, default=None,
+                    dest='trace_dir',
+                    help='enable torch profiling')
 
 
     # deprecated

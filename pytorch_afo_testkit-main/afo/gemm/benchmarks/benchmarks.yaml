@@ -1,0 +1,60 @@
+genericLLM_m:
+  args:
+    - --m_range 128 20000 128 -n 2048 -k 2048
+    - --m_range 128 20000 128 -n 4096 -k 4096
+    - --m_range 128 20000 128 -n 8192 -k 8192
+
+genericLLM_n:
+  args:
+    - --n_range 128 20000 128 -m 2048 -k 2048
+    - --n_range 128 20000 128 -m 4096 -k 4096
+    - --n_range 128 20000 128 -m 8192 -k 8192
+
+genericLLM_k:
+  args:
+    - --k_range 128 20000 128 -m 2048 -n 2048
+    - --k_range 128 20000 128 -m 4096 -n 4096
+    - --k_range 128 20000 128 -m 8192 -n 8192
+
+### Inspired by gpt2
+gpt2:
+  args:
+    - --m_range 768 53760 1768 --n_range 768 22528 1088 --k_range 768 50257 1409
+
+### Inspired by bert
+bert:
+  args:
+    - -m 1024 -n 30522 -k 12288
+    - --m_range 1024 30720 1024 --n_range 1024 12288 1024 --k_range 1024 30720 1024
+
+### Inspired by lstm
+lstm:
+  args:
+    - -m 224 -n 7168 -k 4000
+    - -m 1000 -n 4000 -k 6944
+    - -m 224 -n 4000 -k 7168
+    - --m_range 1000 8000 1000 --n_range 1000 8000 1000 --k_range 1000 8000 1000
+
+### Inspired by whisper
+whisper:
+  args:
+    - -m 1500 -n 53 -k 64
+    - -m 51865 --n_range 5 265 10 -k 1280
+    - --m_range 1 64 1 -n 1 --k_range 1 64 1
+    - --m_range 240 5120 80 --n_range 240 5120 80 -k 240
+    - --m_range 240 5120 80 --n_range 240 5120 80 -k 1280
+    - --m_range 240 5120 80 --n_range 240 5120 80 -k 5120
+
+## Inspired by Resnet152
+resnet152:
+  args:
+    - -m 1152 -n 128 -k 784
+    - -m 147 -n 64 -k 12544
+    - -m 4608 -n 512 -k 49
+    - -m 512 -n 2048 -k 49
+
+## Inspired by Resnet50
+Resnet50:
+  args:
+    - -m 4608 -n 512 -k 49
+    - -m 147 -n 64 -k 12544

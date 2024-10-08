@@ -1,0 +1,10 @@
+deepspeed
+numpy
+pyyaml
+sentencepiece
+tokenizers
+torch
+transformers
+pandas
+xlsxwriter
+prettytable

@@ -1,0 +1,4 @@
+[submodule "afo/rccl/cookbook_bench/rccl-tests"]
+	path = afo/rccl/cookbook_bench/rccl-tests
+	url = https://github.com/ROCm/rccl-tests.git
+	branch = develop

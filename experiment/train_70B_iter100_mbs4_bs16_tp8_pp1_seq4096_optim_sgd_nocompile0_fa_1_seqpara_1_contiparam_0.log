@@ -1,0 +1,1306 @@
+W0910 15:35:25.331810 139850271159488 torch/distributed/run.py:778] 
+W0910 15:35:25.331810 139850271159488 torch/distributed/run.py:778] *****************************************
+W0910 15:35:25.331810 139850271159488 torch/distributed/run.py:778] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0910 15:35:25.331810 139850271159488 torch/distributed/run.py:778] *****************************************
+(min, max) time across ranks (ms):
+    load-checkpoint ................................: (1.70, 1.81)
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (198.17, 199.09)
+    train/valid/test-data-iterators-setup ..........: (5382.57, 5755.42)
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6433 ms 100.0%
+  triton_mm_42 0.8394 ms 76.6%
+  triton_mm_43 0.8442 ms 76.2%
+  triton_mm_40 1.0092 ms 63.7%
+  triton_mm_41 1.0127 ms 63.5%
+  triton_mm_25 1.0330 ms 62.3%
+  triton_mm_44 1.0540 ms 61.0%
+  triton_mm_45 1.0566 ms 60.9%
+  triton_mm_34 1.0582 ms 60.8%
+  triton_mm_24 1.0703 ms 60.1%
+SingleProcess AUTOTUNE benchmarking takes 55.9462 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6403 ms 100.0%
+  triton_mm_42 0.8352 ms 76.7%
+  triton_mm_43 0.8353 ms 76.7%
+  triton_mm_40 1.0000 ms 64.0%
+  triton_mm_41 1.0056 ms 63.7%
+  triton_mm_25 1.0090 ms 63.5%
+  triton_mm_44 1.0290 ms 62.2%
+  triton_mm_45 1.0439 ms 61.3%
+  triton_mm_24 1.0610 ms 60.3%
+  triton_mm_34 1.0810 ms 59.2%
+SingleProcess AUTOTUNE benchmarking takes 56.2247 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6465 ms 100.0%
+  triton_mm_43 0.8410 ms 76.9%
+  triton_mm_42 0.8428 ms 76.7%
+  triton_mm_40 1.0049 ms 64.3%
+  triton_mm_41 1.0067 ms 64.2%
+  triton_mm_44 1.0348 ms 62.5%
+  triton_mm_45 1.0407 ms 62.1%
+  triton_mm_36 1.0550 ms 61.3%
+  triton_mm_24 1.0563 ms 61.2%
+  triton_mm_25 1.0578 ms 61.1%
+SingleProcess AUTOTUNE benchmarking takes 56.5761 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6402 ms 100.0%
+  triton_mm_42 0.8441 ms 75.8%
+  triton_mm_43 0.8597 ms 74.5%
+  triton_mm_41 1.0105 ms 63.4%
+  triton_mm_40 1.0153 ms 63.1%
+  triton_mm_45 1.0315 ms 62.1%
+  triton_mm_44 1.0373 ms 61.7%
+  triton_mm_35 1.0481 ms 61.1%
+  triton_mm_25 1.0484 ms 61.1%
+  triton_mm_24 1.0526 ms 60.8%
+SingleProcess AUTOTUNE benchmarking takes 56.7875 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6404 ms 100.0%
+  triton_mm_42 0.8417 ms 76.1%
+  triton_mm_43 0.8485 ms 75.5%
+  triton_mm_41 1.0185 ms 62.9%
+  triton_mm_40 1.0191 ms 62.8%
+  triton_mm_44 1.0467 ms 61.2%
+  triton_mm_45 1.0505 ms 61.0%
+  triton_mm_25 1.0747 ms 59.6%
+  triton_mm_24 1.0776 ms 59.4%
+  triton_mm_35 1.0918 ms 58.7%
+SingleProcess AUTOTUNE benchmarking takes 56.8233 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6412 ms 100.0%
+  triton_mm_42 0.8385 ms 76.5%
+  triton_mm_43 0.8408 ms 76.3%
+  triton_mm_40 1.0084 ms 63.6%
+  triton_mm_41 1.0110 ms 63.4%
+  triton_mm_45 1.0283 ms 62.4%
+  triton_mm_44 1.0328 ms 62.1%
+  triton_mm_37 1.0591 ms 60.5%
+  triton_mm_24 1.0616 ms 60.4%
+  triton_mm_25 1.0621 ms 60.4%
+SingleProcess AUTOTUNE benchmarking takes 56.9036 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6522 ms 100.0%
+  triton_mm_42 0.8416 ms 77.5%
+  triton_mm_43 0.8459 ms 77.1%
+  triton_mm_40 1.0186 ms 64.0%
+  triton_mm_41 1.0224 ms 63.8%
+  triton_mm_44 1.0428 ms 62.5%
+  triton_mm_45 1.0504 ms 62.1%
+  triton_mm_24 1.0553 ms 61.8%
+  triton_mm_25 1.0576 ms 61.7%
+  triton_mm_35 1.0842 ms 60.2%
+SingleProcess AUTOTUNE benchmarking takes 57.1553 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6443 ms 100.0%
+  triton_mm_42 0.8410 ms 76.6%
+  triton_mm_43 0.8517 ms 75.7%
+  triton_mm_41 1.0167 ms 63.4%
+  triton_mm_40 1.0246 ms 62.9%
+  triton_mm_24 1.0774 ms 59.8%
+  triton_mm_25 1.0885 ms 59.2%
+  triton_mm_45 1.0946 ms 58.9%
+  triton_mm_36 1.0960 ms 58.8%
+  triton_mm_35 1.0976 ms 58.7%
+SingleProcess AUTOTUNE benchmarking takes 58.8063 seconds and 0.0000 seconds precompiling
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5368 ms 100.0%
+  triton_mm_89 0.7846 ms 68.4%
+  triton_mm_88 0.7881 ms 68.1%
+  triton_mm_91 0.8441 ms 63.6%
+  triton_mm_90 0.8521 ms 63.0%
+  triton_mm_81 0.8558 ms 62.7%
+  triton_mm_80 0.8650 ms 62.1%
+  triton_mm_86 0.8933 ms 60.1%
+  triton_mm_87 0.8947 ms 60.0%
+  triton_mm_84 0.9163 ms 58.6%
+SingleProcess AUTOTUNE benchmarking takes 37.7253 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5368 ms 100.0%
+  triton_mm_89 0.7913 ms 67.8%
+  triton_mm_88 0.7968 ms 67.4%
+  triton_mm_90 0.8501 ms 63.1%
+  triton_mm_91 0.8517 ms 63.0%
+  triton_mm_81 0.8580 ms 62.6%
+  triton_mm_86 0.8885 ms 60.4%
+  triton_mm_87 0.8992 ms 59.7%
+  triton_mm_80 0.9146 ms 58.7%
+  triton_mm_85 0.9229 ms 58.2%
+SingleProcess AUTOTUNE benchmarking takes 37.8422 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5340 ms 100.0%
+  triton_mm_89 0.7625 ms 70.0%
+  triton_mm_88 0.7954 ms 67.1%
+  triton_mm_91 0.8406 ms 63.5%
+  triton_mm_90 0.8434 ms 63.3%
+  triton_mm_80 0.8551 ms 62.4%
+  triton_mm_81 0.8570 ms 62.3%
+  triton_mm_87 0.8802 ms 60.7%
+  triton_mm_86 0.8863 ms 60.3%
+  triton_mm_84 0.8966 ms 59.6%
+SingleProcess AUTOTUNE benchmarking takes 38.2300 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5362 ms 100.0%
+  triton_mm_89 0.7685 ms 69.8%
+  triton_mm_88 0.7760 ms 69.1%
+  triton_mm_91 0.8604 ms 62.3%
+  triton_mm_90 0.8631 ms 62.1%
+  triton_mm_81 0.8776 ms 61.1%
+  triton_mm_80 0.8839 ms 60.7%
+  triton_mm_87 0.9105 ms 58.9%
+  triton_mm_86 0.9161 ms 58.5%
+  triton_mm_83 0.9162 ms 58.5%
+SingleProcess AUTOTUNE benchmarking takes 38.0262 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5356 ms 100.0%
+  triton_mm_89 0.7577 ms 70.7%
+  triton_mm_88 0.7680 ms 69.7%
+  triton_mm_90 0.8605 ms 62.2%
+  triton_mm_91 0.8621 ms 62.1%
+  triton_mm_81 0.8718 ms 61.4%
+  triton_mm_80 0.8741 ms 61.3%
+  triton_mm_82 0.9064 ms 59.1%
+  triton_mm_86 0.9146 ms 58.6%
+  triton_mm_87 0.9148 ms 58.5%
+SingleProcess AUTOTUNE benchmarking takes 38.3085 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5331 ms 100.0%
+  triton_mm_88 0.7664 ms 69.6%
+  triton_mm_89 0.8020 ms 66.5%
+  triton_mm_91 0.8329 ms 64.0%
+  triton_mm_90 0.8485 ms 62.8%
+  triton_mm_81 0.8721 ms 61.1%
+  triton_mm_80 0.8856 ms 60.2%
+  triton_mm_87 0.8884 ms 60.0%
+  triton_mm_86 0.8909 ms 59.8%
+  triton_mm_84 0.9131 ms 58.4%
+SingleProcess AUTOTUNE benchmarking takes 38.2355 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5414 ms 100.0%
+  triton_mm_89 0.7583 ms 71.4%
+  triton_mm_88 0.7710 ms 70.2%
+  triton_mm_90 0.8485 ms 63.8%
+  triton_mm_91 0.8518 ms 63.6%
+  triton_mm_80 0.8633 ms 62.7%
+  triton_mm_81 0.8645 ms 62.6%
+  triton_mm_87 0.8886 ms 60.9%
+  triton_mm_86 0.8966 ms 60.4%
+  triton_mm_85 0.9102 ms 59.5%
+SingleProcess AUTOTUNE benchmarking takes 38.9066 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5414 ms 100.0%
+  triton_mm_88 0.7621 ms 71.0%
+  triton_mm_89 0.7688 ms 70.4%
+  triton_mm_90 0.8561 ms 63.2%
+  triton_mm_91 0.8608 ms 62.9%
+  triton_mm_80 0.8737 ms 62.0%
+  triton_mm_81 0.8759 ms 61.8%
+  triton_mm_87 0.9038 ms 59.9%
+  triton_mm_86 0.9081 ms 59.6%
+  triton_mm_84 0.9211 ms 58.8%
+SingleProcess AUTOTUNE benchmarking takes 40.3964 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0497 ms 100.0%
+  triton_mm_135 4.6410 ms 65.7%
+  triton_mm_134 4.6792 ms 65.2%
+  triton_mm_136 5.4163 ms 56.3%
+  triton_mm_137 5.4521 ms 55.9%
+  triton_mm_127 5.6546 ms 53.9%
+  triton_mm_133 5.6664 ms 53.8%
+  triton_mm_126 5.7044 ms 53.5%
+  triton_mm_132 5.7083 ms 53.4%
+  triton_mm_130 5.8908 ms 51.8%
+SingleProcess AUTOTUNE benchmarking takes 40.9866 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0319 ms 100.0%
+  triton_mm_135 4.6349 ms 65.4%
+  triton_mm_134 4.6837 ms 64.7%
+  triton_mm_136 5.4287 ms 55.8%
+  triton_mm_137 5.4516 ms 55.6%
+  triton_mm_132 5.6730 ms 53.4%
+  triton_mm_133 5.7084 ms 53.1%
+  triton_mm_127 5.7329 ms 52.9%
+  triton_mm_126 5.7848 ms 52.4%
+  triton_mm_131 5.8483 ms 51.8%
+SingleProcess AUTOTUNE benchmarking takes 41.1519 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0515 ms 100.0%
+  triton_mm_134 4.7692 ms 64.0%
+  triton_mm_135 4.7953 ms 63.6%
+  triton_mm_137 5.5819 ms 54.7%
+  triton_mm_136 5.6124 ms 54.4%
+  triton_mm_127 5.6724 ms 53.8%
+  triton_mm_126 5.6827 ms 53.7%
+  triton_mm_132 5.7717 ms 52.9%
+  triton_mm_133 5.8114 ms 52.5%
+  triton_mm_131 6.0317 ms 50.6%
+SingleProcess AUTOTUNE benchmarking takes 41.4850 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0017 ms 100.0%
+  triton_mm_134 4.7464 ms 63.2%
+  triton_mm_135 4.7791 ms 62.8%
+  triton_mm_136 5.5415 ms 54.2%
+  triton_mm_137 5.5605 ms 54.0%
+  triton_mm_126 5.6811 ms 52.8%
+  triton_mm_127 5.7307 ms 52.4%
+  triton_mm_132 5.7459 ms 52.2%
+  triton_mm_133 5.7464 ms 52.2%
+  triton_mm_131 6.0304 ms 49.8%
+SingleProcess AUTOTUNE benchmarking takes 41.7290 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0059 ms 100.0%
+  triton_mm_134 4.6947 ms 64.0%
+  triton_mm_135 4.7041 ms 63.9%
+  triton_mm_137 5.4877 ms 54.8%
+  triton_mm_136 5.4884 ms 54.8%
+  triton_mm_126 5.6463 ms 53.2%
+  triton_mm_132 5.7530 ms 52.2%
+  triton_mm_133 5.7730 ms 52.1%
+  triton_mm_127 5.8073 ms 51.8%
+  triton_mm_130 5.9952 ms 50.1%
+SingleProcess AUTOTUNE benchmarking takes 41.6863 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0005 ms 100.0%
+  triton_mm_134 4.6883 ms 64.0%
+  triton_mm_135 4.7335 ms 63.4%
+  triton_mm_136 5.4518 ms 55.0%
+  triton_mm_137 5.4853 ms 54.7%
+  triton_mm_126 5.6137 ms 53.4%
+  triton_mm_127 5.6503 ms 53.1%
+  triton_mm_133 5.7095 ms 52.6%
+  triton_mm_132 5.7444 ms 52.2%
+  triton_mm_130 5.9313 ms 50.6%
+SingleProcess AUTOTUNE benchmarking takes 41.8008 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0618 ms 100.0%
+  triton_mm_134 4.6863 ms 65.3%
+  triton_mm_135 4.6878 ms 65.3%
+  triton_mm_136 5.4762 ms 55.9%
+  triton_mm_137 5.4894 ms 55.8%
+  triton_mm_126 5.5903 ms 54.8%
+  triton_mm_127 5.6411 ms 54.3%
+  triton_mm_132 5.7159 ms 53.6%
+  triton_mm_133 5.7252 ms 53.5%
+  triton_mm_131 5.9447 ms 51.5%
+SingleProcess AUTOTUNE benchmarking takes 41.8695 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.0425 ms 100.0%
+  triton_mm_134 4.8139 ms 63.2%
+  triton_mm_135 4.9742 ms 61.2%
+  triton_mm_136 5.5212 ms 55.1%
+  triton_mm_137 5.6009 ms 54.3%
+  triton_mm_127 5.6698 ms 53.7%
+  triton_mm_126 5.6756 ms 53.6%
+  triton_mm_133 5.7553 ms 52.9%
+  triton_mm_132 5.7840 ms 52.6%
+  triton_mm_128 6.0619 ms 50.2%
+SingleProcess AUTOTUNE benchmarking takes 45.1542 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6222 ms 100.0%
+  triton_mm_181 2.3710 ms 68.4%
+  triton_mm_180 2.3830 ms 68.1%
+  triton_mm_182 2.7313 ms 59.4%
+  triton_mm_183 2.7536 ms 58.9%
+  triton_mm_178 2.7826 ms 58.3%
+  triton_mm_179 2.7974 ms 58.0%
+  triton_mm_173 2.8404 ms 57.1%
+  triton_mm_172 2.8500 ms 56.9%
+  triton_mm_177 2.9167 ms 55.6%
+SingleProcess AUTOTUNE benchmarking takes 40.8019 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6191 ms 100.0%
+  triton_mm_181 2.3854 ms 67.9%
+  triton_mm_180 2.3883 ms 67.8%
+  triton_mm_182 2.7295 ms 59.3%
+  triton_mm_183 2.7577 ms 58.7%
+  triton_mm_178 2.8081 ms 57.7%
+  triton_mm_179 2.8084 ms 57.7%
+  triton_mm_176 2.9483 ms 54.9%
+  triton_mm_177 2.9568 ms 54.8%
+  triton_mm_173 2.9775 ms 54.4%
+SingleProcess AUTOTUNE benchmarking takes 40.8843 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6467 ms 100.0%
+  triton_mm_181 2.3871 ms 69.0%
+  triton_mm_180 2.4342 ms 67.7%
+  triton_mm_182 2.7009 ms 61.0%
+  triton_mm_183 2.7510 ms 59.9%
+  triton_mm_178 2.7724 ms 59.4%
+  triton_mm_179 2.7952 ms 58.9%
+  triton_mm_173 2.8166 ms 58.5%
+  triton_mm_172 2.8166 ms 58.5%
+  triton_mm_176 2.9079 ms 56.6%
+SingleProcess AUTOTUNE benchmarking takes 41.3420 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6453 ms 100.0%
+  triton_mm_181 2.4162 ms 68.1%
+  triton_mm_180 2.4312 ms 67.7%
+  triton_mm_182 2.7897 ms 59.0%
+  triton_mm_183 2.8336 ms 58.1%
+  triton_mm_178 2.8623 ms 57.5%
+  triton_mm_172 2.8694 ms 57.3%
+  triton_mm_173 2.8830 ms 57.1%
+  triton_mm_179 2.8905 ms 56.9%
+  triton_mm_177 2.9892 ms 55.0%
+SingleProcess AUTOTUNE benchmarking takes 41.4252 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6313 ms 100.0%
+  triton_mm_181 2.3960 ms 68.1%
+  triton_mm_180 2.3977 ms 68.0%
+  triton_mm_182 2.7651 ms 59.0%
+  triton_mm_183 2.8582 ms 57.1%
+  triton_mm_178 2.8620 ms 57.0%
+  triton_mm_173 2.8637 ms 57.0%
+  triton_mm_172 2.8691 ms 56.9%
+  triton_mm_179 2.8731 ms 56.8%
+  triton_mm_177 3.0059 ms 54.3%
+SingleProcess AUTOTUNE benchmarking takes 41.6490 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6496 ms 100.0%
+  triton_mm_180 2.3903 ms 69.0%
+  triton_mm_181 2.3922 ms 69.0%
+  triton_mm_182 2.7462 ms 60.1%
+  triton_mm_179 2.8062 ms 58.8%
+  triton_mm_178 2.8194 ms 58.5%
+  triton_mm_183 2.8461 ms 58.0%
+  triton_mm_172 2.8528 ms 57.8%
+  triton_mm_173 2.8559 ms 57.8%
+  triton_mm_177 2.9387 ms 56.1%
+SingleProcess AUTOTUNE benchmarking takes 41.6946 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6316 ms 100.0%
+  triton_mm_180 2.3749 ms 68.7%
+  triton_mm_181 2.3786 ms 68.6%
+  triton_mm_182 2.7625 ms 59.1%
+  triton_mm_178 2.7896 ms 58.5%
+  triton_mm_179 2.8101 ms 58.1%
+  triton_mm_172 2.8368 ms 57.5%
+  triton_mm_183 2.8717 ms 56.8%
+  triton_mm_176 2.9405 ms 55.5%
+  triton_mm_177 2.9445 ms 55.4%
+SingleProcess AUTOTUNE benchmarking takes 41.8774 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.6498 ms 100.0%
+  triton_mm_181 2.5097 ms 65.7%
+  triton_mm_180 2.5345 ms 65.1%
+  triton_mm_183 2.7941 ms 59.0%
+  triton_mm_182 2.8514 ms 57.9%
+  triton_mm_173 2.8609 ms 57.7%
+  triton_mm_172 2.8693 ms 57.5%
+  triton_mm_178 2.8744 ms 57.4%
+  triton_mm_179 2.8863 ms 57.2%
+  triton_mm_177 2.9785 ms 55.4%
+SingleProcess AUTOTUNE benchmarking takes 45.3315 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9418 ms 100.0%
+  triton_mm_227 2.7270 ms 71.2%
+  triton_mm_226 2.7286 ms 71.2%
+  triton_mm_229 3.2128 ms 60.4%
+  triton_mm_228 3.2167 ms 60.4%
+  triton_mm_219 3.2644 ms 59.5%
+  triton_mm_218 3.2878 ms 59.1%
+  triton_mm_225 3.3658 ms 57.7%
+  triton_mm_224 3.3857 ms 57.4%
+  triton_mm_220 3.4690 ms 56.0%
+SingleProcess AUTOTUNE benchmarking takes 40.0772 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9172 ms 100.0%
+  triton_mm_227 2.6961 ms 71.1%
+  triton_mm_226 2.6966 ms 71.1%
+  triton_mm_228 3.1531 ms 60.8%
+  triton_mm_229 3.1830 ms 60.2%
+  triton_mm_225 3.3322 ms 57.5%
+  triton_mm_224 3.3400 ms 57.4%
+  triton_mm_219 3.3884 ms 56.6%
+  triton_mm_218 3.3958 ms 56.5%
+  triton_mm_221 3.4183 ms 56.1%
+SingleProcess AUTOTUNE benchmarking takes 40.2829 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9119 ms 100.0%
+  triton_mm_227 2.6891 ms 71.1%
+  triton_mm_226 2.7450 ms 69.7%
+  triton_mm_228 3.0918 ms 61.8%
+  triton_mm_229 3.1594 ms 60.5%
+  triton_mm_225 3.2846 ms 58.2%
+  triton_mm_224 3.2859 ms 58.2%
+  triton_mm_218 3.3588 ms 56.9%
+  triton_mm_219 3.3681 ms 56.8%
+  triton_mm_221 3.3730 ms 56.7%
+SingleProcess AUTOTUNE benchmarking takes 40.3318 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9070 ms 100.0%
+  triton_mm_227 2.7039 ms 70.5%
+  triton_mm_226 2.7104 ms 70.4%
+  triton_mm_228 3.1189 ms 61.1%
+  triton_mm_229 3.1809 ms 60.0%
+  triton_mm_225 3.2710 ms 58.3%
+  triton_mm_224 3.3250 ms 57.4%
+  triton_mm_218 3.3626 ms 56.7%
+  triton_mm_221 3.3797 ms 56.4%
+  triton_mm_220 3.3873 ms 56.3%
+SingleProcess AUTOTUNE benchmarking takes 40.3447 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9088 ms 100.0%
+  triton_mm_226 2.6992 ms 70.7%
+  triton_mm_227 2.7369 ms 69.7%
+  triton_mm_228 3.2156 ms 59.4%
+  triton_mm_229 3.2539 ms 58.7%
+  triton_mm_218 3.2565 ms 58.6%
+  triton_mm_219 3.2778 ms 58.2%
+  triton_mm_225 3.3344 ms 57.2%
+  triton_mm_224 3.3506 ms 57.0%
+  triton_mm_222 3.4787 ms 54.9%
+SingleProcess AUTOTUNE benchmarking takes 40.4012 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9270 ms 100.0%
+  triton_mm_227 2.7040 ms 71.3%
+  triton_mm_226 2.7074 ms 71.2%
+  triton_mm_228 3.1342 ms 61.5%
+  triton_mm_229 3.1366 ms 61.4%
+  triton_mm_225 3.3275 ms 57.9%
+  triton_mm_224 3.3298 ms 57.9%
+  triton_mm_218 3.3712 ms 57.2%
+  triton_mm_219 3.3860 ms 56.9%
+  triton_mm_221 3.4072 ms 56.6%
+SingleProcess AUTOTUNE benchmarking takes 40.4337 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9672 ms 100.0%
+  triton_mm_226 2.6965 ms 73.0%
+  triton_mm_227 2.7007 ms 72.8%
+  triton_mm_228 3.1559 ms 62.3%
+  triton_mm_219 3.2054 ms 61.4%
+  triton_mm_218 3.2210 ms 61.1%
+  triton_mm_225 3.3004 ms 59.6%
+  triton_mm_224 3.3164 ms 59.3%
+  triton_mm_229 3.3359 ms 59.0%
+  triton_mm_220 3.4299 ms 57.4%
+SingleProcess AUTOTUNE benchmarking takes 41.1045 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9410 ms 100.0%
+  triton_mm_227 2.8451 ms 68.2%
+  triton_mm_226 2.8514 ms 68.1%
+  triton_mm_228 3.1894 ms 60.9%
+  triton_mm_229 3.2101 ms 60.5%
+  triton_mm_218 3.2601 ms 59.5%
+  triton_mm_219 3.2689 ms 59.4%
+  triton_mm_224 3.3196 ms 58.5%
+  triton_mm_225 3.3702 ms 57.6%
+  triton_mm_221 3.4689 ms 56.0%
+SingleProcess AUTOTUNE benchmarking takes 45.0932 seconds and 0.0000 seconds precompiling
+ iteration        1/     100 | consumed samples:           16 | elapsed time per iteration (ms): 465682.7 | throughput per GPU (TFLOP/s/GPU): 3.2 | learning rate: 3.000E-04 | global batch size:    16 | mem usages: 0.8165 | lm loss: 1.204134E+01 | loss scale: 1.0 | grad norm: 110.818 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        2/     100 | consumed samples:           32 | elapsed time per iteration (ms): 6551.3 | throughput per GPU (TFLOP/s/GPU): 227.6 | learning rate: 2.999E-04 | global batch size:    16 | mem usages: 0.8913 | lm loss: 1.203189E+01 | loss scale: 1.0 | grad norm: 110.867 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        3/     100 | consumed samples:           48 | elapsed time per iteration (ms): 6609.9 | throughput per GPU (TFLOP/s/GPU): 225.6 | learning rate: 2.997E-04 | global batch size:    16 | mem usages: 0.8932 | lm loss: 1.202798E+01 | loss scale: 1.0 | grad norm: 110.892 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        4/     100 | consumed samples:           64 | elapsed time per iteration (ms): 6633.4 | throughput per GPU (TFLOP/s/GPU): 224.8 | learning rate: 2.994E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.203178E+01 | loss scale: 1.0 | grad norm: 110.891 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        5/     100 | consumed samples:           80 | elapsed time per iteration (ms): 6646.9 | throughput per GPU (TFLOP/s/GPU): 224.3 | learning rate: 2.989E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.203148E+01 | loss scale: 1.0 | grad norm: 110.923 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        6/     100 | consumed samples:           96 | elapsed time per iteration (ms): 6627.3 | throughput per GPU (TFLOP/s/GPU): 225.0 | learning rate: 2.983E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.202598E+01 | loss scale: 1.0 | grad norm: 110.911 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        7/     100 | consumed samples:          112 | elapsed time per iteration (ms): 6604.9 | throughput per GPU (TFLOP/s/GPU): 225.7 | learning rate: 2.976E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.202958E+01 | loss scale: 1.0 | grad norm: 111.015 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        8/     100 | consumed samples:          128 | elapsed time per iteration (ms): 6664.1 | throughput per GPU (TFLOP/s/GPU): 223.7 | learning rate: 2.967E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.202836E+01 | loss scale: 1.0 | grad norm: 111.000 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        9/     100 | consumed samples:          144 | elapsed time per iteration (ms): 6663.5 | throughput per GPU (TFLOP/s/GPU): 223.7 | learning rate: 2.957E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.203910E+01 | loss scale: 1.0 | grad norm: 110.851 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       10/     100 | consumed samples:          160 | elapsed time per iteration (ms): 6677.9 | throughput per GPU (TFLOP/s/GPU): 223.3 | learning rate: 2.945E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.203724E+01 | loss scale: 1.0 | grad norm: 110.857 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       11/     100 | consumed samples:          176 | elapsed time per iteration (ms): 6653.6 | throughput per GPU (TFLOP/s/GPU): 224.1 | learning rate: 2.933E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.203030E+01 | loss scale: 1.0 | grad norm: 110.827 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       12/     100 | consumed samples:          192 | elapsed time per iteration (ms): 6635.3 | throughput per GPU (TFLOP/s/GPU): 224.7 | learning rate: 2.919E-04 | global batch size:    16 | mem usages: 0.8945 | lm loss: 1.203292E+01 | loss scale: 1.0 | grad norm: 110.866 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       13/     100 | consumed samples:          208 | elapsed time per iteration (ms): 6668.6 | throughput per GPU (TFLOP/s/GPU): 223.6 | learning rate: 2.903E-04 | global batch size:    16 | mem usages: 0.8952 | lm loss: 1.202742E+01 | loss scale: 1.0 | grad norm: 110.969 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       14/     100 | consumed samples:          224 | elapsed time per iteration (ms): 6682.0 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 2.887E-04 | global batch size:    16 | mem usages: 0.8952 | lm loss: 1.203037E+01 | loss scale: 1.0 | grad norm: 110.898 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       15/     100 | consumed samples:          240 | elapsed time per iteration (ms): 6698.3 | throughput per GPU (TFLOP/s/GPU): 222.6 | learning rate: 2.869E-04 | global batch size:    16 | mem usages: 0.8952 | lm loss: 1.200431E+01 | loss scale: 1.0 | grad norm: 110.831 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       16/     100 | consumed samples:          256 | elapsed time per iteration (ms): 6677.4 | throughput per GPU (TFLOP/s/GPU): 223.3 | learning rate: 2.850E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.200497E+01 | loss scale: 1.0 | grad norm: 110.652 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       17/     100 | consumed samples:          272 | elapsed time per iteration (ms): 6658.7 | throughput per GPU (TFLOP/s/GPU): 223.9 | learning rate: 2.830E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.198989E+01 | loss scale: 1.0 | grad norm: 110.428 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       18/     100 | consumed samples:          288 | elapsed time per iteration (ms): 6685.5 | throughput per GPU (TFLOP/s/GPU): 223.0 | learning rate: 2.808E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.199009E+01 | loss scale: 1.0 | grad norm: 110.151 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       19/     100 | consumed samples:          304 | elapsed time per iteration (ms): 6678.7 | throughput per GPU (TFLOP/s/GPU): 223.2 | learning rate: 2.786E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.200143E+01 | loss scale: 1.0 | grad norm: 110.104 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       20/     100 | consumed samples:          320 | elapsed time per iteration (ms): 6709.8 | throughput per GPU (TFLOP/s/GPU): 222.2 | learning rate: 2.762E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.199575E+01 | loss scale: 1.0 | grad norm: 109.877 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       21/     100 | consumed samples:          336 | elapsed time per iteration (ms): 6683.7 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 2.737E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.202708E+01 | loss scale: 1.0 | grad norm: 194.039 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       22/     100 | consumed samples:          352 | elapsed time per iteration (ms): 6645.1 | throughput per GPU (TFLOP/s/GPU): 224.4 | learning rate: 2.711E-04 | global batch size:    16 | mem usages: 0.8971 | lm loss: 1.196962E+01 | loss scale: 1.0 | grad norm: 109.448 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       23/     100 | consumed samples:          368 | elapsed time per iteration (ms): 7421.8 | throughput per GPU (TFLOP/s/GPU): 200.9 | learning rate: 2.684E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.199301E+01 | loss scale: 1.0 | grad norm: 109.321 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       24/     100 | consumed samples:          384 | elapsed time per iteration (ms): 6669.7 | throughput per GPU (TFLOP/s/GPU): 223.5 | learning rate: 2.656E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.200718E+01 | loss scale: 1.0 | grad norm: 109.358 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       25/     100 | consumed samples:          400 | elapsed time per iteration (ms): 7111.2 | throughput per GPU (TFLOP/s/GPU): 209.7 | learning rate: 2.627E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.200094E+01 | loss scale: 1.0 | grad norm: 109.311 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       26/     100 | consumed samples:          416 | elapsed time per iteration (ms): 6619.4 | throughput per GPU (TFLOP/s/GPU): 225.2 | learning rate: 2.597E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.200683E+01 | loss scale: 1.0 | grad norm: 109.295 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       27/     100 | consumed samples:          432 | elapsed time per iteration (ms): 6626.3 | throughput per GPU (TFLOP/s/GPU): 225.0 | learning rate: 2.566E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.200568E+01 | loss scale: 1.0 | grad norm: 109.339 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       28/     100 | consumed samples:          448 | elapsed time per iteration (ms): 7492.4 | throughput per GPU (TFLOP/s/GPU): 199.0 | learning rate: 2.534E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.200734E+01 | loss scale: 1.0 | grad norm: 109.448 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       29/     100 | consumed samples:          464 | elapsed time per iteration (ms): 7478.5 | throughput per GPU (TFLOP/s/GPU): 199.4 | learning rate: 2.501E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.200801E+01 | loss scale: 1.0 | grad norm: 109.437 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       30/     100 | consumed samples:          480 | elapsed time per iteration (ms): 6668.8 | throughput per GPU (TFLOP/s/GPU): 223.6 | learning rate: 2.468E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.201829E+01 | loss scale: 1.0 | grad norm: 109.257 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       31/     100 | consumed samples:          496 | elapsed time per iteration (ms): 6606.9 | throughput per GPU (TFLOP/s/GPU): 225.7 | learning rate: 2.433E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.199117E+01 | loss scale: 1.0 | grad norm: 109.365 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       32/     100 | consumed samples:          512 | elapsed time per iteration (ms): 6617.3 | throughput per GPU (TFLOP/s/GPU): 225.3 | learning rate: 2.398E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.197616E+01 | loss scale: 1.0 | grad norm: 109.284 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       33/     100 | consumed samples:          528 | elapsed time per iteration (ms): 6647.8 | throughput per GPU (TFLOP/s/GPU): 224.3 | learning rate: 2.362E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.197248E+01 | loss scale: 1.0 | grad norm: 109.171 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       34/     100 | consumed samples:          544 | elapsed time per iteration (ms): 7669.7 | throughput per GPU (TFLOP/s/GPU): 194.4 | learning rate: 2.325E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.199444E+01 | loss scale: 1.0 | grad norm: 109.147 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       35/     100 | consumed samples:          560 | elapsed time per iteration (ms): 6877.0 | throughput per GPU (TFLOP/s/GPU): 216.8 | learning rate: 2.288E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.196730E+01 | loss scale: 1.0 | grad norm: 109.025 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       36/     100 | consumed samples:          576 | elapsed time per iteration (ms): 7713.3 | throughput per GPU (TFLOP/s/GPU): 193.3 | learning rate: 2.249E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.197301E+01 | loss scale: 1.0 | grad norm: 109.028 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       37/     100 | consumed samples:          592 | elapsed time per iteration (ms): 6663.6 | throughput per GPU (TFLOP/s/GPU): 223.7 | learning rate: 2.211E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.198276E+01 | loss scale: 1.0 | grad norm: 108.963 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       38/     100 | consumed samples:          608 | elapsed time per iteration (ms): 6682.9 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 2.172E-04 | global batch size:    16 | mem usages: 0.9032 | lm loss: 1.197382E+01 | loss scale: 1.0 | grad norm: 108.831 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       39/     100 | consumed samples:          624 | elapsed time per iteration (ms): 7491.4 | throughput per GPU (TFLOP/s/GPU): 199.0 | learning rate: 2.132E-04 | global batch size:    16 | mem usages: 0.9045 | lm loss: 1.198027E+01 | loss scale: 1.0 | grad norm: 108.851 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       40/     100 | consumed samples:          640 | elapsed time per iteration (ms): 6671.2 | throughput per GPU (TFLOP/s/GPU): 223.5 | learning rate: 2.092E-04 | global batch size:    16 | mem usages: 0.9045 | lm loss: 1.196166E+01 | loss scale: 1.0 | grad norm: 108.811 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       41/     100 | consumed samples:          656 | elapsed time per iteration (ms): 6653.0 | throughput per GPU (TFLOP/s/GPU): 224.1 | learning rate: 2.051E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195897E+01 | loss scale: 1.0 | grad norm: 108.718 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       42/     100 | consumed samples:          672 | elapsed time per iteration (ms): 6683.6 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 2.010E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.197240E+01 | loss scale: 1.0 | grad norm: 108.661 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       43/     100 | consumed samples:          688 | elapsed time per iteration (ms): 6682.2 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 1.968E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195964E+01 | loss scale: 1.0 | grad norm: 108.553 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       44/     100 | consumed samples:          704 | elapsed time per iteration (ms): 7098.8 | throughput per GPU (TFLOP/s/GPU): 210.0 | learning rate: 1.926E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195982E+01 | loss scale: 1.0 | grad norm: 108.603 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       45/     100 | consumed samples:          720 | elapsed time per iteration (ms): 7155.8 | throughput per GPU (TFLOP/s/GPU): 208.4 | learning rate: 1.884E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195803E+01 | loss scale: 1.0 | grad norm: 108.534 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       46/     100 | consumed samples:          736 | elapsed time per iteration (ms): 6667.7 | throughput per GPU (TFLOP/s/GPU): 223.6 | learning rate: 1.842E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195800E+01 | loss scale: 1.0 | grad norm: 108.476 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       47/     100 | consumed samples:          752 | elapsed time per iteration (ms): 6681.1 | throughput per GPU (TFLOP/s/GPU): 223.2 | learning rate: 1.800E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195910E+01 | loss scale: 1.0 | grad norm: 108.350 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       48/     100 | consumed samples:          768 | elapsed time per iteration (ms): 6700.2 | throughput per GPU (TFLOP/s/GPU): 222.5 | learning rate: 1.757E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195273E+01 | loss scale: 1.0 | grad norm: 108.406 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       49/     100 | consumed samples:          784 | elapsed time per iteration (ms): 6711.3 | throughput per GPU (TFLOP/s/GPU): 222.2 | learning rate: 1.714E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192623E+01 | loss scale: 1.0 | grad norm: 108.299 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       50/     100 | consumed samples:          800 | elapsed time per iteration (ms): 6681.9 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 1.671E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193804E+01 | loss scale: 1.0 | grad norm: 108.227 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       51/     100 | consumed samples:          816 | elapsed time per iteration (ms): 6647.1 | throughput per GPU (TFLOP/s/GPU): 224.3 | learning rate: 1.629E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193209E+01 | loss scale: 1.0 | grad norm: 108.152 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       52/     100 | consumed samples:          832 | elapsed time per iteration (ms): 6686.5 | throughput per GPU (TFLOP/s/GPU): 223.0 | learning rate: 1.586E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194020E+01 | loss scale: 1.0 | grad norm: 108.027 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       53/     100 | consumed samples:          848 | elapsed time per iteration (ms): 6683.2 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 1.543E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191823E+01 | loss scale: 1.0 | grad norm: 107.941 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       54/     100 | consumed samples:          864 | elapsed time per iteration (ms): 6683.8 | throughput per GPU (TFLOP/s/GPU): 223.1 | learning rate: 1.500E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193511E+01 | loss scale: 1.0 | grad norm: 107.896 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       55/     100 | consumed samples:          880 | elapsed time per iteration (ms): 6638.9 | throughput per GPU (TFLOP/s/GPU): 224.6 | learning rate: 1.458E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192578E+01 | loss scale: 1.0 | grad norm: 107.841 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       56/     100 | consumed samples:          896 | elapsed time per iteration (ms): 6621.7 | throughput per GPU (TFLOP/s/GPU): 225.2 | learning rate: 1.416E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191740E+01 | loss scale: 1.0 | grad norm: 107.758 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       57/     100 | consumed samples:          912 | elapsed time per iteration (ms): 6644.4 | throughput per GPU (TFLOP/s/GPU): 224.4 | learning rate: 1.374E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192013E+01 | loss scale: 1.0 | grad norm: 107.816 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       58/     100 | consumed samples:          928 | elapsed time per iteration (ms): 6674.8 | throughput per GPU (TFLOP/s/GPU): 223.4 | learning rate: 1.332E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.190551E+01 | loss scale: 1.0 | grad norm: 107.701 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       59/     100 | consumed samples:          944 | elapsed time per iteration (ms): 6666.3 | throughput per GPU (TFLOP/s/GPU): 223.7 | learning rate: 1.290E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192933E+01 | loss scale: 1.0 | grad norm: 107.680 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       60/     100 | consumed samples:          960 | elapsed time per iteration (ms): 6627.3 | throughput per GPU (TFLOP/s/GPU): 225.0 | learning rate: 1.249E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.190168E+01 | loss scale: 1.0 | grad norm: 107.463 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       61/     100 | consumed samples:          976 | elapsed time per iteration (ms): 6608.7 | throughput per GPU (TFLOP/s/GPU): 225.6 | learning rate: 1.208E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192727E+01 | loss scale: 1.0 | grad norm: 107.499 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       62/     100 | consumed samples:          992 | elapsed time per iteration (ms): 6643.1 | throughput per GPU (TFLOP/s/GPU): 224.4 | learning rate: 1.168E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192247E+01 | loss scale: 1.0 | grad norm: 107.480 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       63/     100 | consumed samples:         1008 | elapsed time per iteration (ms): 6656.4 | throughput per GPU (TFLOP/s/GPU): 224.0 | learning rate: 1.128E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193057E+01 | loss scale: 1.0 | grad norm: 107.504 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       64/     100 | consumed samples:         1024 | elapsed time per iteration (ms): 6663.0 | throughput per GPU (TFLOP/s/GPU): 223.8 | learning rate: 1.089E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194398E+01 | loss scale: 1.0 | grad norm: 107.512 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       65/     100 | consumed samples:         1040 | elapsed time per iteration (ms): 6620.4 | throughput per GPU (TFLOP/s/GPU): 225.2 | learning rate: 1.051E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193710E+01 | loss scale: 1.0 | grad norm: 107.393 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       66/     100 | consumed samples:         1056 | elapsed time per iteration (ms): 6612.4 | throughput per GPU (TFLOP/s/GPU): 225.5 | learning rate: 1.012E-04 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194361E+01 | loss scale: 1.0 | grad norm: 107.338 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       67/     100 | consumed samples:         1072 | elapsed time per iteration (ms): 6652.4 | throughput per GPU (TFLOP/s/GPU): 224.1 | learning rate: 9.750E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194442E+01 | loss scale: 1.0 | grad norm: 107.406 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       68/     100 | consumed samples:         1088 | elapsed time per iteration (ms): 6660.1 | throughput per GPU (TFLOP/s/GPU): 223.9 | learning rate: 9.382E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194088E+01 | loss scale: 1.0 | grad norm: 107.370 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       69/     100 | consumed samples:         1104 | elapsed time per iteration (ms): 6660.2 | throughput per GPU (TFLOP/s/GPU): 223.9 | learning rate: 9.022E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193446E+01 | loss scale: 1.0 | grad norm: 107.459 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       70/     100 | consumed samples:         1120 | elapsed time per iteration (ms): 6618.6 | throughput per GPU (TFLOP/s/GPU): 225.3 | learning rate: 8.669E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194267E+01 | loss scale: 1.0 | grad norm: 107.338 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       71/     100 | consumed samples:         1136 | elapsed time per iteration (ms): 6607.8 | throughput per GPU (TFLOP/s/GPU): 225.6 | learning rate: 8.324E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193686E+01 | loss scale: 1.0 | grad norm: 107.330 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       72/     100 | consumed samples:         1152 | elapsed time per iteration (ms): 6636.5 | throughput per GPU (TFLOP/s/GPU): 224.7 | learning rate: 7.988E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194052E+01 | loss scale: 1.0 | grad norm: 107.356 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       73/     100 | consumed samples:         1168 | elapsed time per iteration (ms): 6642.6 | throughput per GPU (TFLOP/s/GPU): 224.5 | learning rate: 7.659E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195051E+01 | loss scale: 1.0 | grad norm: 107.346 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       74/     100 | consumed samples:         1184 | elapsed time per iteration (ms): 6662.7 | throughput per GPU (TFLOP/s/GPU): 223.8 | learning rate: 7.340E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.195135E+01 | loss scale: 1.0 | grad norm: 107.408 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       75/     100 | consumed samples:         1200 | elapsed time per iteration (ms): 6657.4 | throughput per GPU (TFLOP/s/GPU): 224.0 | learning rate: 7.030E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194443E+01 | loss scale: 1.0 | grad norm: 107.306 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       76/     100 | consumed samples:         1216 | elapsed time per iteration (ms): 6647.6 | throughput per GPU (TFLOP/s/GPU): 224.3 | learning rate: 6.730E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193804E+01 | loss scale: 1.0 | grad norm: 107.368 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       77/     100 | consumed samples:         1232 | elapsed time per iteration (ms): 6676.1 | throughput per GPU (TFLOP/s/GPU): 223.3 | learning rate: 6.439E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194511E+01 | loss scale: 1.0 | grad norm: 107.232 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       78/     100 | consumed samples:         1248 | elapsed time per iteration (ms): 6685.4 | throughput per GPU (TFLOP/s/GPU): 223.0 | learning rate: 6.158E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193741E+01 | loss scale: 1.0 | grad norm: 107.255 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       79/     100 | consumed samples:         1264 | elapsed time per iteration (ms): 6694.2 | throughput per GPU (TFLOP/s/GPU): 222.7 | learning rate: 5.888E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191958E+01 | loss scale: 1.0 | grad norm: 107.190 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       80/     100 | consumed samples:         1280 | elapsed time per iteration (ms): 6686.7 | throughput per GPU (TFLOP/s/GPU): 223.0 | learning rate: 5.629E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192831E+01 | loss scale: 1.0 | grad norm: 107.367 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       81/     100 | consumed samples:         1296 | elapsed time per iteration (ms): 6652.2 | throughput per GPU (TFLOP/s/GPU): 224.1 | learning rate: 5.380E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194396E+01 | loss scale: 1.0 | grad norm: 107.170 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       82/     100 | consumed samples:         1312 | elapsed time per iteration (ms): 6678.7 | throughput per GPU (TFLOP/s/GPU): 223.2 | learning rate: 5.143E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.194221E+01 | loss scale: 1.0 | grad norm: 107.264 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       83/     100 | consumed samples:         1328 | elapsed time per iteration (ms): 6689.8 | throughput per GPU (TFLOP/s/GPU): 222.9 | learning rate: 4.917E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193865E+01 | loss scale: 1.0 | grad norm: 107.305 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       84/     100 | consumed samples:         1344 | elapsed time per iteration (ms): 6692.7 | throughput per GPU (TFLOP/s/GPU): 222.8 | learning rate: 4.703E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193695E+01 | loss scale: 1.0 | grad norm: 107.277 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       85/     100 | consumed samples:         1360 | elapsed time per iteration (ms): 6655.3 | throughput per GPU (TFLOP/s/GPU): 224.0 | learning rate: 4.501E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193786E+01 | loss scale: 1.0 | grad norm: 107.196 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       86/     100 | consumed samples:         1376 | elapsed time per iteration (ms): 6632.2 | throughput per GPU (TFLOP/s/GPU): 224.8 | learning rate: 4.310E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192141E+01 | loss scale: 1.0 | grad norm: 107.161 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       87/     100 | consumed samples:         1392 | elapsed time per iteration (ms): 6667.6 | throughput per GPU (TFLOP/s/GPU): 223.6 | learning rate: 4.133E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191584E+01 | loss scale: 1.0 | grad norm: 107.213 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       88/     100 | consumed samples:         1408 | elapsed time per iteration (ms): 6657.6 | throughput per GPU (TFLOP/s/GPU): 223.9 | learning rate: 3.967E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192432E+01 | loss scale: 1.0 | grad norm: 107.212 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       89/     100 | consumed samples:         1424 | elapsed time per iteration (ms): 6664.0 | throughput per GPU (TFLOP/s/GPU): 223.7 | learning rate: 3.814E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192091E+01 | loss scale: 1.0 | grad norm: 107.189 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       90/     100 | consumed samples:         1440 | elapsed time per iteration (ms): 6639.0 | throughput per GPU (TFLOP/s/GPU): 224.6 | learning rate: 3.674E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191561E+01 | loss scale: 1.0 | grad norm: 107.168 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       91/     100 | consumed samples:         1456 | elapsed time per iteration (ms): 6611.1 | throughput per GPU (TFLOP/s/GPU): 225.5 | learning rate: 3.547E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191094E+01 | loss scale: 1.0 | grad norm: 107.192 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       92/     100 | consumed samples:         1472 | elapsed time per iteration (ms): 6646.3 | throughput per GPU (TFLOP/s/GPU): 224.3 | learning rate: 3.433E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192969E+01 | loss scale: 1.0 | grad norm: 107.082 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       93/     100 | consumed samples:         1488 | elapsed time per iteration (ms): 6649.4 | throughput per GPU (TFLOP/s/GPU): 224.2 | learning rate: 3.332E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.192366E+01 | loss scale: 1.0 | grad norm: 107.146 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       94/     100 | consumed samples:         1504 | elapsed time per iteration (ms): 6666.0 | throughput per GPU (TFLOP/s/GPU): 223.7 | learning rate: 3.244E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.190613E+01 | loss scale: 1.0 | grad norm: 107.235 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       95/     100 | consumed samples:         1520 | elapsed time per iteration (ms): 6642.7 | throughput per GPU (TFLOP/s/GPU): 224.4 | learning rate: 3.170E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.193567E+01 | loss scale: 1.0 | grad norm: 107.163 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       96/     100 | consumed samples:         1536 | elapsed time per iteration (ms): 6617.1 | throughput per GPU (TFLOP/s/GPU): 225.3 | learning rate: 3.109E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191373E+01 | loss scale: 1.0 | grad norm: 107.154 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       97/     100 | consumed samples:         1552 | elapsed time per iteration (ms): 6638.9 | throughput per GPU (TFLOP/s/GPU): 224.6 | learning rate: 3.061E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191892E+01 | loss scale: 1.0 | grad norm: 106.999 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       98/     100 | consumed samples:         1568 | elapsed time per iteration (ms): 6671.1 | throughput per GPU (TFLOP/s/GPU): 223.5 | learning rate: 3.027E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191945E+01 | loss scale: 1.0 | grad norm: 107.103 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       99/     100 | consumed samples:         1584 | elapsed time per iteration (ms): 6647.6 | throughput per GPU (TFLOP/s/GPU): 224.3 | learning rate: 3.007E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191399E+01 | loss scale: 1.0 | grad norm: 107.116 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration      100/     100 | consumed samples:         1600 | elapsed time per iteration (ms): 6631.9 | throughput per GPU (TFLOP/s/GPU): 224.8 | learning rate: 3.000E-05 | global batch size:    16 | mem usages: 0.9038 | lm loss: 1.191370E+01 | loss scale: 1.0 | grad norm: 107.086 | number of skipped iterations:   0 | number of nan iterations:   0 |
+.layers.41.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.72.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.67.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.59.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.52.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.45.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.72.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.61.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.59.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.68.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.55.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.53.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.49.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.76.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.65.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.58.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.54.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.49.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.70.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.78.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.76.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.72.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.65.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.56.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.43.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.77.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.70.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.66.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.46.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.75.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.64.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.60.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.49.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.47.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.73.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.69.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.62.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.52.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.47.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.41.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.54.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.52.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.48.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.41.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.75.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.64.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.57.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.53.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.51.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.42.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.embedding.word_embeddings.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.79.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.71.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.66.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.58.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.51.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.44.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.60.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.58.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.49.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.74.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.67.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.63.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.59.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.46.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.72.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.68.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.61.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.48.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.46.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.77.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.75.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.69.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.64.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.55.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.42.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.40.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.76.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.71.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.69.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.65.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.45.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.78.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.70.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.57.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.50.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.43.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.mlp.dense_4h_to_h.weight
+> learning rate decay style: cosine
+WARNING: could not find the metadata file experiment/ckpts/latest_checkpointed_iteration.txt 
+    will not load any checkpoints and will start from random
+[after model, optimizer, and learning rate scheduler are built] datetime: 2024-09-10 15:35:39 
+> building train, validation, and test datasets ...
+ > datasets target sizes (minimum size):
+    train:      1600
+    validation: -16
+    test:       -16
+INFO:megatron.core.datasets.blended_megatron_dataset_config:mock = False
+INFO:megatron.core.datasets.blended_megatron_dataset_config:Let split_matrix = [(0, 0.949), (0.949, 0.999), (0.999, 1.0)]
+> building train, validation, and test datasets for GPT ...
+INFO:megatron.core.datasets.indexed_dataset:Load the _IndexReader from /root/.cache/data/bookcorpus_text_sentence.idx
+INFO:megatron.core.datasets.indexed_dataset:	Extract the sequence lengths
+INFO:megatron.core.datasets.indexed_dataset:	Extract the sequence pointers
+INFO:megatron.core.datasets.indexed_dataset:	Extract the document indices
+INFO:megatron.core.datasets.indexed_dataset:> total number of sequences: 74157091
+INFO:megatron.core.datasets.indexed_dataset:> total number of documents: 74004228
+INFO:megatron.core.datasets.gpt_dataset:Build and save the GPTDataset train indices
+INFO:megatron.core.datasets.gpt_dataset:	Build and save the document index to 08362a6d5e56b41de2b226ce61ac9a20-GPTDataset-document_index.npy
+INFO:megatron.core.datasets.gpt_dataset:	Build and save the sample index to 08362a6d5e56b41de2b226ce61ac9a20-GPTDataset-sample_index.npy
+INFO:megatron.core.datasets.gpt_dataset:	Build and save the shuffle index to 08362a6d5e56b41de2b226ce61ac9a20-GPTDataset-shuffle_index.npy
+INFO:megatron.core.datasets.gpt_dataset:> total number of samples: 271886
+INFO:megatron.core.datasets.gpt_dataset:> total number of epochs: 1
+INFO:megatron.core.datasets.gpt_dataset:Load the GPTDataset valid indices
+INFO:megatron.core.datasets.gpt_dataset:	Load the document index from 28b987238f81e96def3c565cf392b9cc-GPTDataset-document_index.npy
+INFO:megatron.core.datasets.gpt_dataset:	Load the sample index from 28b987238f81e96def3c565cf392b9cc-GPTDataset-sample_index.npy
+INFO:megatron.core.datasets.gpt_dataset:	Load the shuffle index from 28b987238f81e96def3c565cf392b9cc-GPTDataset-shuffle_index.npy
+INFO:megatron.core.datasets.gpt_dataset:> total number of samples: 14468
+INFO:megatron.core.datasets.gpt_dataset:> total number of epochs: 1
+INFO:megatron.core.datasets.gpt_dataset:Load the GPTDataset test indices
+INFO:megatron.core.datasets.gpt_dataset:	Load the document index from 2017ca1db71883a079f6a4c13ad14d88-GPTDataset-document_index.npy
+INFO:megatron.core.datasets.gpt_dataset:	Load the sample index from 2017ca1db71883a079f6a4c13ad14d88-GPTDataset-sample_index.npy
+INFO:megatron.core.datasets.gpt_dataset:	Load the shuffle index from 2017ca1db71883a079f6a4c13ad14d88-GPTDataset-shuffle_index.npy
+INFO:megatron.core.datasets.gpt_dataset:> total number of samples: 281
+INFO:megatron.core.datasets.gpt_dataset:> total number of epochs: 1
+> finished creating GPT datasets ...
+[after dataloaders are built] datetime: 2024-09-10 15:35:45 
+done with setup ...
+training ...
+[before the start of training step] datetime: 2024-09-10 15:35:45 
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6658 ms 100.0%
+  triton_mm_42 0.9331 ms 71.4%
+  triton_mm_43 0.9507 ms 70.0%
+  triton_mm_24 1.0591 ms 62.9%
+  triton_mm_41 1.0633 ms 62.6%
+  triton_mm_25 1.0642 ms 62.6%
+  triton_mm_40 1.0709 ms 62.2%
+  triton_mm_44 1.0774 ms 61.8%
+  triton_mm_45 1.0818 ms 61.5%
+  triton_mm_35 1.0925 ms 60.9%
+SingleProcess AUTOTUNE benchmarking takes 56.2792 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6624 ms 100.0%
+  triton_mm_42 0.9410 ms 70.4%
+  triton_mm_43 0.9494 ms 69.8%
+  triton_mm_24 1.0454 ms 63.4%
+  triton_mm_25 1.0512 ms 63.0%
+  triton_mm_40 1.0599 ms 62.5%
+  triton_mm_41 1.0643 ms 62.2%
+  triton_mm_45 1.0796 ms 61.4%
+  triton_mm_44 1.0814 ms 61.3%
+  triton_mm_34 1.0832 ms 61.1%
+SingleProcess AUTOTUNE benchmarking takes 56.5139 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6710 ms 100.0%
+  triton_mm_43 0.9473 ms 70.8%
+  triton_mm_42 0.9500 ms 70.6%
+  triton_mm_41 1.0668 ms 62.9%
+  triton_mm_24 1.0779 ms 62.3%
+  triton_mm_25 1.0808 ms 62.1%
+  triton_mm_40 1.0865 ms 61.8%
+  triton_mm_44 1.1133 ms 60.3%
+  triton_mm_35 1.1134 ms 60.3%
+  triton_mm_34 1.1137 ms 60.3%
+SingleProcess AUTOTUNE benchmarking takes 56.9074 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6650 ms 100.0%
+  triton_mm_42 0.9424 ms 70.6%
+  triton_mm_43 0.9530 ms 69.8%
+  triton_mm_45 1.0533 ms 63.1%
+  triton_mm_25 1.0705 ms 62.1%
+  triton_mm_24 1.0725 ms 62.0%
+  triton_mm_40 1.0790 ms 61.6%
+  triton_mm_41 1.0950 ms 60.7%
+  triton_mm_44 1.1057 ms 60.1%
+  triton_mm_34 1.1070 ms 60.1%
+SingleProcess AUTOTUNE benchmarking takes 56.9716 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6570 ms 100.0%
+  triton_mm_43 0.9392 ms 70.0%
+  triton_mm_42 0.9488 ms 69.3%
+  triton_mm_41 1.0593 ms 62.0%
+  triton_mm_24 1.0700 ms 61.4%
+  triton_mm_25 1.0740 ms 61.2%
+  triton_mm_40 1.0814 ms 60.8%
+  triton_mm_44 1.0912 ms 60.2%
+  triton_mm_45 1.0972 ms 59.9%
+  triton_mm_34 1.1516 ms 57.1%
+SingleProcess AUTOTUNE benchmarking takes 56.8796 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6615 ms 100.0%
+  triton_mm_42 0.9608 ms 68.9%
+  triton_mm_43 0.9614 ms 68.8%
+  triton_mm_25 1.0670 ms 62.0%
+  triton_mm_41 1.0787 ms 61.3%
+  triton_mm_44 1.0916 ms 60.6%
+  triton_mm_24 1.0976 ms 60.3%
+  triton_mm_34 1.0995 ms 60.2%
+  triton_mm_45 1.1025 ms 60.0%
+  triton_mm_40 1.1061 ms 59.8%
+SingleProcess AUTOTUNE benchmarking takes 57.4294 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6509 ms 100.0%
+  triton_mm_43 0.9457 ms 68.8%
+  triton_mm_42 0.9464 ms 68.8%
+  triton_mm_44 1.0421 ms 62.5%
+  triton_mm_24 1.0469 ms 62.2%
+  triton_mm_25 1.0491 ms 62.0%
+  triton_mm_41 1.0596 ms 61.4%
+  triton_mm_40 1.0618 ms 61.3%
+  triton_mm_34 1.0740 ms 60.6%
+  triton_mm_45 1.0842 ms 60.0%
+SingleProcess AUTOTUNE benchmarking takes 57.7933 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x1280)
+  mm 0.6547 ms 100.0%
+  triton_mm_42 0.9456 ms 69.2%
+  triton_mm_43 0.9505 ms 68.9%
+  triton_mm_25 1.0557 ms 62.0%
+  triton_mm_40 1.0699 ms 61.2%
+  triton_mm_34 1.0732 ms 61.0%
+  triton_mm_41 1.0933 ms 59.9%
+  triton_mm_24 1.0933 ms 59.9%
+  triton_mm_36 1.0971 ms 59.7%
+  triton_mm_35 1.1314 ms 57.9%
+SingleProcess AUTOTUNE benchmarking takes 59.8126 seconds and 0.0000 seconds precompiling
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.6040 ms 100.0%
+  triton_mm_89 0.8021 ms 75.3%
+  triton_mm_88 0.8036 ms 75.2%
+  triton_mm_91 0.8596 ms 70.3%
+  triton_mm_81 0.8982 ms 67.2%
+  triton_mm_90 0.8990 ms 67.2%
+  triton_mm_80 0.9084 ms 66.5%
+  triton_mm_87 0.9220 ms 65.5%
+  triton_mm_86 0.9261 ms 65.2%
+  triton_mm_84 0.9391 ms 64.3%
+SingleProcess AUTOTUNE benchmarking takes 37.5905 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5847 ms 100.0%
+  triton_mm_89 0.7853 ms 74.5%
+  triton_mm_88 0.7871 ms 74.3%
+  triton_mm_90 0.8738 ms 66.9%
+  triton_mm_91 0.8785 ms 66.5%
+  triton_mm_80 0.8892 ms 65.8%
+  triton_mm_81 0.8937 ms 65.4%
+  triton_mm_85 0.9224 ms 63.4%
+  triton_mm_86 0.9281 ms 63.0%
+  triton_mm_87 0.9300 ms 62.9%
+SingleProcess AUTOTUNE benchmarking takes 37.7062 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5889 ms 100.0%
+  triton_mm_88 0.8140 ms 72.3%
+  triton_mm_89 0.8157 ms 72.2%
+  triton_mm_91 0.8625 ms 68.3%
+  triton_mm_90 0.8631 ms 68.2%
+  triton_mm_80 0.9145 ms 64.4%
+  triton_mm_86 0.9176 ms 64.2%
+  triton_mm_81 0.9186 ms 64.1%
+  triton_mm_87 0.9193 ms 64.1%
+  triton_mm_84 0.9384 ms 62.8%
+SingleProcess AUTOTUNE benchmarking takes 37.6336 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5764 ms 100.0%
+  triton_mm_89 0.8021 ms 71.9%
+  triton_mm_88 0.8041 ms 71.7%
+  triton_mm_91 0.8631 ms 66.8%
+  triton_mm_90 0.8681 ms 66.4%
+  triton_mm_81 0.9053 ms 63.7%
+  triton_mm_80 0.9060 ms 63.6%
+  triton_mm_87 0.9105 ms 63.3%
+  triton_mm_86 0.9172 ms 62.8%
+  triton_mm_85 0.9343 ms 61.7%
+SingleProcess AUTOTUNE benchmarking takes 37.9298 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5830 ms 100.0%
+  triton_mm_88 0.8073 ms 72.2%
+  triton_mm_89 0.8089 ms 72.1%
+  triton_mm_91 0.8929 ms 65.3%
+  triton_mm_90 0.9009 ms 64.7%
+  triton_mm_81 0.9083 ms 64.2%
+  triton_mm_80 0.9093 ms 64.1%
+  triton_mm_86 0.9121 ms 63.9%
+  triton_mm_87 0.9146 ms 63.7%
+  triton_mm_84 0.9340 ms 62.4%
+SingleProcess AUTOTUNE benchmarking takes 37.8684 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5769 ms 100.0%
+  triton_mm_88 0.7944 ms 72.6%
+  triton_mm_89 0.7949 ms 72.6%
+  triton_mm_90 0.8503 ms 67.8%
+  triton_mm_91 0.8695 ms 66.3%
+  triton_mm_81 0.8898 ms 64.8%
+  triton_mm_80 0.8959 ms 64.4%
+  triton_mm_87 0.9037 ms 63.8%
+  triton_mm_86 0.9218 ms 62.6%
+  triton_mm_85 0.9244 ms 62.4%
+SingleProcess AUTOTUNE benchmarking takes 38.6378 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5869 ms 100.0%
+  triton_mm_89 0.8150 ms 72.0%
+  triton_mm_88 0.8160 ms 71.9%
+  triton_mm_90 0.8681 ms 67.6%
+  triton_mm_91 0.8718 ms 67.3%
+  triton_mm_86 0.9202 ms 63.8%
+  triton_mm_87 0.9205 ms 63.8%
+  triton_mm_81 0.9223 ms 63.6%
+  triton_mm_80 0.9261 ms 63.4%
+  triton_mm_85 0.9447 ms 62.1%
+SingleProcess AUTOTUNE benchmarking takes 38.5357 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x1024, 1024x8192)
+  mm 0.5791 ms 100.0%
+  triton_mm_88 0.8028 ms 72.1%
+  triton_mm_89 0.8314 ms 69.6%
+  triton_mm_90 0.8780 ms 66.0%
+  triton_mm_91 0.8796 ms 65.8%
+  triton_mm_81 0.8875 ms 65.2%
+  triton_mm_80 0.8918 ms 64.9%
+  triton_mm_87 0.9249 ms 62.6%
+  triton_mm_86 0.9261 ms 62.5%
+  triton_mm_85 0.9511 ms 60.9%
+SingleProcess AUTOTUNE benchmarking takes 40.9629 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.3206 ms 100.0%
+  triton_mm_134 4.9371 ms 67.3%
+  triton_mm_135 5.0026 ms 66.4%
+  triton_mm_136 5.5204 ms 60.2%
+  triton_mm_137 5.7063 ms 58.2%
+  triton_mm_132 5.8413 ms 56.8%
+  triton_mm_133 5.8684 ms 56.6%
+  triton_mm_126 5.9036 ms 56.2%
+  triton_mm_127 5.9228 ms 56.1%
+  triton_mm_131 6.1543 ms 54.0%
+SingleProcess AUTOTUNE benchmarking takes 40.2828 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.3401 ms 100.0%
+  triton_mm_135 4.9440 ms 67.6%
+  triton_mm_134 4.9546 ms 67.4%
+  triton_mm_136 5.7157 ms 58.4%
+  triton_mm_137 5.7352 ms 58.2%
+  triton_mm_132 5.8227 ms 57.4%
+  triton_mm_133 5.8698 ms 56.9%
+  triton_mm_127 5.8934 ms 56.7%
+  triton_mm_126 5.9082 ms 56.5%
+  triton_mm_129 6.0630 ms 55.1%
+SingleProcess AUTOTUNE benchmarking takes 40.8245 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.2808 ms 100.0%
+  triton_mm_134 4.9177 ms 66.7%
+  triton_mm_135 4.9325 ms 66.5%
+  triton_mm_136 5.7290 ms 57.3%
+  triton_mm_137 5.7595 ms 57.0%
+  triton_mm_133 5.7839 ms 56.7%
+  triton_mm_132 5.8159 ms 56.4%
+  triton_mm_127 5.8162 ms 56.4%
+  triton_mm_126 5.8634 ms 56.0%
+  triton_mm_130 6.0557 ms 54.2%
+SingleProcess AUTOTUNE benchmarking takes 41.5693 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.3070 ms 100.0%
+  triton_mm_134 4.8719 ms 67.9%
+  triton_mm_135 4.9100 ms 67.4%
+  triton_mm_136 5.6975 ms 58.0%
+  triton_mm_137 5.7440 ms 57.6%
+  triton_mm_126 5.8153 ms 56.9%
+  triton_mm_127 5.8177 ms 56.8%
+  triton_mm_133 5.8184 ms 56.8%
+  triton_mm_132 5.8727 ms 56.3%
+  triton_mm_130 6.1535 ms 53.7%
+SingleProcess AUTOTUNE benchmarking takes 41.6375 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.3293 ms 100.0%
+  triton_mm_134 5.0014 ms 66.6%
+  triton_mm_135 5.0089 ms 66.5%
+  triton_mm_137 5.5607 ms 59.9%
+  triton_mm_136 5.8124 ms 57.3%
+  triton_mm_126 5.9227 ms 56.2%
+  triton_mm_133 5.9287 ms 56.2%
+  triton_mm_127 5.9363 ms 56.1%
+  triton_mm_132 5.9416 ms 56.0%
+  triton_mm_131 6.2324 ms 53.4%
+SingleProcess AUTOTUNE benchmarking takes 41.4014 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.3784 ms 100.0%
+  triton_mm_134 5.0330 ms 67.1%
+  triton_mm_135 5.0783 ms 66.5%
+  triton_mm_136 5.5312 ms 61.1%
+  triton_mm_137 5.5673 ms 60.7%
+  triton_mm_133 5.8812 ms 57.4%
+  triton_mm_132 5.8821 ms 57.4%
+  triton_mm_126 5.9788 ms 56.5%
+  triton_mm_127 5.9857 ms 56.4%
+  triton_mm_129 6.0685 ms 55.7%
+SingleProcess AUTOTUNE benchmarking takes 41.7330 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.4012 ms 100.0%
+  triton_mm_135 5.0590 ms 67.2%
+  triton_mm_134 5.0719 ms 67.1%
+  triton_mm_136 5.6092 ms 60.6%
+  triton_mm_137 5.7783 ms 58.9%
+  triton_mm_132 5.8956 ms 57.7%
+  triton_mm_133 5.9139 ms 57.5%
+  triton_mm_126 6.0245 ms 56.5%
+  triton_mm_127 6.0345 ms 56.4%
+  triton_mm_131 6.1943 ms 54.9%
+SingleProcess AUTOTUNE benchmarking takes 42.4576 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x7168)
+  mm 3.3130 ms 100.0%
+  triton_mm_134 4.9707 ms 66.6%
+  triton_mm_135 5.1313 ms 64.6%
+  triton_mm_137 5.6125 ms 59.0%
+  triton_mm_136 5.6431 ms 58.7%
+  triton_mm_126 5.8117 ms 57.0%
+  triton_mm_127 5.8407 ms 56.7%
+  triton_mm_133 5.8668 ms 56.5%
+  triton_mm_132 5.8798 ms 56.3%
+  triton_mm_129 6.2170 ms 53.3%
+SingleProcess AUTOTUNE benchmarking takes 44.3890 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7493 ms 100.0%
+  triton_mm_181 2.4951 ms 70.1%
+  triton_mm_180 2.4965 ms 70.1%
+  triton_mm_178 2.7935 ms 62.6%
+  triton_mm_179 2.8012 ms 62.4%
+  triton_mm_182 2.8325 ms 61.8%
+  triton_mm_183 2.8391 ms 61.6%
+  triton_mm_173 2.9113 ms 60.1%
+  triton_mm_172 2.9286 ms 59.7%
+  triton_mm_176 3.0489 ms 57.4%
+SingleProcess AUTOTUNE benchmarking takes 39.6649 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7509 ms 100.0%
+  triton_mm_180 2.5308 ms 69.2%
+  triton_mm_181 2.5411 ms 68.9%
+  triton_mm_182 2.7806 ms 63.0%
+  triton_mm_179 2.8390 ms 61.7%
+  triton_mm_178 2.8396 ms 61.7%
+  triton_mm_183 2.8866 ms 60.7%
+  triton_mm_176 2.9704 ms 58.9%
+  triton_mm_172 2.9736 ms 58.9%
+  triton_mm_173 2.9749 ms 58.9%
+SingleProcess AUTOTUNE benchmarking takes 39.5986 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7270 ms 100.0%
+  triton_mm_180 2.5078 ms 68.9%
+  triton_mm_181 2.5146 ms 68.7%
+  triton_mm_183 2.7607 ms 62.6%
+  triton_mm_178 2.7990 ms 61.7%
+  triton_mm_179 2.8096 ms 61.5%
+  triton_mm_182 2.8508 ms 60.6%
+  triton_mm_172 2.9125 ms 59.3%
+  triton_mm_176 2.9350 ms 58.8%
+  triton_mm_173 2.9388 ms 58.8%
+SingleProcess AUTOTUNE benchmarking takes 40.0892 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7769 ms 100.0%
+  triton_mm_180 2.5657 ms 69.3%
+  triton_mm_181 2.5757 ms 69.0%
+  triton_mm_182 2.8009 ms 63.4%
+  triton_mm_183 2.8288 ms 62.8%
+  triton_mm_179 2.8660 ms 62.0%
+  triton_mm_178 2.8669 ms 62.0%
+  triton_mm_177 2.9956 ms 59.3%
+  triton_mm_172 3.0045 ms 59.1%
+  triton_mm_173 3.0084 ms 59.1%
+SingleProcess AUTOTUNE benchmarking takes 40.5736 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7925 ms 100.0%
+  triton_mm_181 2.5800 ms 69.5%
+  triton_mm_180 2.5898 ms 69.2%
+  triton_mm_182 2.8307 ms 63.3%
+  triton_mm_183 2.8631 ms 62.6%
+  triton_mm_179 2.8964 ms 61.9%
+  triton_mm_178 2.9062 ms 61.7%
+  triton_mm_177 3.0196 ms 59.4%
+  triton_mm_176 3.0225 ms 59.3%
+  triton_mm_173 3.0332 ms 59.1%
+SingleProcess AUTOTUNE benchmarking takes 41.0883 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7539 ms 100.0%
+  triton_mm_181 2.5381 ms 69.1%
+  triton_mm_180 2.5434 ms 69.0%
+  triton_mm_182 2.7804 ms 63.1%
+  triton_mm_178 2.8320 ms 61.9%
+  triton_mm_183 2.8411 ms 61.7%
+  triton_mm_179 2.8438 ms 61.7%
+  triton_mm_176 2.9710 ms 59.0%
+  triton_mm_173 2.9819 ms 58.8%
+  triton_mm_172 2.9915 ms 58.6%
+SingleProcess AUTOTUNE benchmarking takes 41.0521 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7508 ms 100.0%
+  triton_mm_180 2.5527 ms 68.6%
+  triton_mm_181 2.5721 ms 68.1%
+  triton_mm_182 2.7981 ms 62.6%
+  triton_mm_178 2.8470 ms 61.5%
+  triton_mm_179 2.8574 ms 61.3%
+  triton_mm_183 2.8686 ms 61.0%
+  triton_mm_177 2.9726 ms 58.9%
+  triton_mm_172 2.9751 ms 58.8%
+  triton_mm_173 2.9848 ms 58.7%
+SingleProcess AUTOTUNE benchmarking takes 41.3845 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x3584, 3584x8192)
+  mm 1.7492 ms 100.0%
+  triton_mm_181 2.6288 ms 66.5%
+  triton_mm_180 2.6307 ms 66.5%
+  triton_mm_182 2.8265 ms 61.9%
+  triton_mm_178 2.8279 ms 61.9%
+  triton_mm_183 2.8324 ms 61.8%
+  triton_mm_179 2.8849 ms 60.6%
+  triton_mm_172 2.9141 ms 60.0%
+  triton_mm_173 2.9366 ms 59.6%
+  triton_mm_176 3.0658 ms 57.1%
+SingleProcess AUTOTUNE benchmarking takes 45.3338 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9961 ms 100.0%
+  triton_mm_226 2.8113 ms 71.0%
+  triton_mm_227 2.8208 ms 70.8%
+  triton_mm_224 3.3397 ms 59.8%
+  triton_mm_229 3.3427 ms 59.7%
+  triton_mm_225 3.3500 ms 59.6%
+  triton_mm_228 3.3577 ms 59.4%
+  triton_mm_219 3.3642 ms 59.3%
+  triton_mm_218 3.3684 ms 59.3%
+  triton_mm_220 3.4164 ms 58.4%
+SingleProcess AUTOTUNE benchmarking takes 39.5098 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 2.0316 ms 100.0%
+  triton_mm_226 2.8298 ms 71.8%
+  triton_mm_227 2.8450 ms 71.4%
+  triton_mm_228 3.3020 ms 61.5%
+  triton_mm_229 3.3124 ms 61.3%
+  triton_mm_224 3.3575 ms 60.5%
+  triton_mm_225 3.3588 ms 60.5%
+  triton_mm_219 3.3796 ms 60.1%
+  triton_mm_218 3.3951 ms 59.8%
+  triton_mm_220 3.4331 ms 59.2%
+SingleProcess AUTOTUNE benchmarking takes 39.6930 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 2.0189 ms 100.0%
+  triton_mm_226 2.8282 ms 71.4%
+  triton_mm_227 2.8448 ms 71.0%
+  triton_mm_229 3.3437 ms 60.4%
+  triton_mm_228 3.3473 ms 60.3%
+  triton_mm_219 3.3709 ms 59.9%
+  triton_mm_225 3.3755 ms 59.8%
+  triton_mm_218 3.3831 ms 59.7%
+  triton_mm_224 3.3866 ms 59.6%
+  triton_mm_220 3.4308 ms 58.8%
+SingleProcess AUTOTUNE benchmarking takes 39.7654 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9701 ms 100.0%
+  triton_mm_226 2.8003 ms 70.4%
+  triton_mm_227 2.8018 ms 70.3%
+  triton_mm_229 3.1711 ms 62.1%
+  triton_mm_225 3.3021 ms 59.7%
+  triton_mm_228 3.3026 ms 59.7%
+  triton_mm_224 3.3328 ms 59.1%
+  triton_mm_219 3.3457 ms 58.9%
+  triton_mm_218 3.3484 ms 58.8%
+  triton_mm_222 3.5349 ms 55.7%
+SingleProcess AUTOTUNE benchmarking takes 39.9942 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 2.0247 ms 100.0%
+  triton_mm_227 2.8539 ms 70.9%
+  triton_mm_226 2.8588 ms 70.8%
+  triton_mm_228 3.1691 ms 63.9%
+  triton_mm_229 3.2100 ms 63.1%
+  triton_mm_225 3.3617 ms 60.2%
+  triton_mm_218 3.3962 ms 59.6%
+  triton_mm_224 3.4071 ms 59.4%
+  triton_mm_219 3.4078 ms 59.4%
+  triton_mm_221 3.4599 ms 58.5%
+SingleProcess AUTOTUNE benchmarking takes 40.0017 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9791 ms 100.0%
+  triton_mm_227 2.7674 ms 71.5%
+  triton_mm_226 2.7741 ms 71.3%
+  triton_mm_228 3.2802 ms 60.3%
+  triton_mm_219 3.3246 ms 59.5%
+  triton_mm_218 3.3395 ms 59.3%
+  triton_mm_229 3.3448 ms 59.2%
+  triton_mm_225 3.3568 ms 59.0%
+  triton_mm_224 3.3605 ms 58.9%
+  triton_mm_221 3.5522 ms 55.7%
+SingleProcess AUTOTUNE benchmarking takes 39.9877 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 2.0401 ms 100.0%
+  triton_mm_227 2.8863 ms 70.7%
+  triton_mm_226 2.8982 ms 70.4%
+  triton_mm_229 3.3018 ms 61.8%
+  triton_mm_228 3.3071 ms 61.7%
+  triton_mm_225 3.3974 ms 60.0%
+  triton_mm_224 3.4004 ms 60.0%
+  triton_mm_219 3.4454 ms 59.2%
+  triton_mm_218 3.4470 ms 59.2%
+  triton_mm_220 3.5100 ms 58.1%
+SingleProcess AUTOTUNE benchmarking takes 40.1585 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(16384x8192, 8192x4096)
+  mm 1.9571 ms 100.0%
+  triton_mm_226 2.8296 ms 69.2%
+  triton_mm_227 2.9243 ms 66.9%
+  triton_mm_228 3.2094 ms 61.0%
+  triton_mm_218 3.3019 ms 59.3%
+  triton_mm_229 3.3029 ms 59.3%
+  triton_mm_219 3.3105 ms 59.1%
+  triton_mm_224 3.3135 ms 59.1%
+  triton_mm_225 3.3653 ms 58.2%
+  triton_mm_220 3.5145 ms 55.7%
+SingleProcess AUTOTUNE benchmarking takes 42.9867 seconds and 0.0000 seconds precompiling
+[Rank 7] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 153002.0 | max reserved: 153002.0
+[Rank 4] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 153330.0 | max reserved: 153330.0
+[Rank 1] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 153322.0 | max reserved: 153322.0[Rank 2] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 153010.0 | max reserved: 153010.0
+
+[Rank 6] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 152626.0 | max reserved: 152626.0
+[Rank 5] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 152962.0 | max reserved: 152962.0
+[Rank 0] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 153586.0 | max reserved: 153586.0
+[Rank 3] (after 1 iterations) memory (MB) | allocated: 82509.55029296875 | max allocated: 117035.33837890625 | reserved: 152322.0 | max reserved: 152322.0
+[after training is done] datetime: 2024-09-10 15:54:36 
+throughput per GPU: 6726.390816326531
+elapsed time per iteration: 6726.390816326531
+tokens/GPU/s: 608.944694
+tokens/GPU/s: 4541598.984349
+mem usages: 

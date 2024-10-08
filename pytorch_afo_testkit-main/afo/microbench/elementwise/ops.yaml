@@ -1,0 +1,56 @@
+# The empty [[]] in size represent non-tensor type
+# https://pytorch.org/docs/stable/autograd.html#torch.autograd.profiler.emit_nvtx
+- {
+  'name': 'vllm_llama-v2_70b_2048_1', 'operators':
+  [
+    {'operator_name': 'aten.bitwise_and', 'size': '[[], []]'},
+    {'operator_name': 'aten.bitwise_or', 'size': '[[2048], [2048]]'},
+    # the actual implement statment is at::div_out(q, self, q); (https://github.com/pytorch/pytorch/blob/8bad7b63c8b1ba4e7d1a9d86023d5b29068c2cb4/aten/src/ATen/native/Distributions.cpp#L631)
+    # and the input size is [[32000], [32000], [32000]]. But cannot find any documentation about at::div_out()
+    {'operator_name': 'aten.div', 'size': '[[32000], [32000], [32000]]'},
+    {'operator_name': 'aten.eq', 'size': '[[], []]'},
+    {'operator_name': 'aten.exponential_', 'size': '[[32000], [], []]'},
+    {'operator_name': 'aten.fill_', 'size': '[[2048, 8192], []]', 'dtype': 'torch.half'},
+    # The actual kenel name in the workload is aten::native::legacy (input size [[],[]]), but the following test generates aten::native::modern (input size [[1],[1]])
+    {'operator_name': 'aten.ge', 'size': '[[], []]'},
+    {'operator_name': 'aten.ge', 'size': '[[2048], []]'},
+    {'operator_name': 'aten.index', 'size': '[[2048, 8192], [1]]'},
+    {'operator_name': 'aten.log', 'size': '[[1, 32000]]'},
+    # The actual kenel name in the workload is aten::native::legacy (input size [[],[]]), but the following test generates aten::native::modern (input size [[1],[1]])
+    {'operator_name': 'aten.lt', 'size': '[[], []]'},
+    {'operator_name': 'aten.lt', 'size': '[[2048], []]'},
+    {'operator_name': 'aten.masked_fill_', 'size': '[[2048, 8192], [2048, 1], []]'},
+    {'operator_name': 'aten.masked_fill_', 'size': '[[2048], [2048], []]'},
+    {'operator_name': 'aten.sub', 'size': '[[2048], [], []]'}
+  ]
+}
+
+- {
+  'name': 'vllm_llama-v2_70b_2048_2', 'operators':
+  [
+    {'operator_name': 'aten.bitwise_and', 'size': '[[], []]'},
+    {'operator_name': 'aten.bitwise_or', 'size': '[[2048], [2048]]'},
+    # the actual implement statment is at::div_out(q, self, q); (https://github.com/pytorch/pytorch/blob/8bad7b63c8b1ba4e7d1a9d86023d5b29068c2cb4/aten/src/ATen/native/Distributions.cpp#L631)
+    # and the input size is [[32000], [32000], [32000]]. But cannot find any documentation about at::div_out()
+    {'operator_name': 'aten.div', 'size': '[[32000], [32000], [32000]]'},
+    {'operator_name': 'aten.div_', 'size': '[[1, 32000], [1, 32000]]'},
+    {'operator_name': 'aten.eq', 'size': '[[], []]'},
+    {'operator_name': 'aten.exponential_', 'size': '[[1, 32000], [], []]'},
+    {'operator_name': 'aten.exponential_', 'size': '[[32000], [], []]'},
+    {'operator_name': 'aten.fill_', 'size': '[[2048, 8192], []]', 'dtype': 'torch.half'},
+    {'operator_name': 'aten.fill_', 'size': '[[1, 32768], []]', 'dtype': 'torch.half'},
+    {'operator_name': 'aten.fill_', 'size': '[[1], []]', 'dtype': 'torch.half'},
+    # The actual kenel name in the workload is aten::native::legacy (input size [[],[]]), but the following test generates aten::native::modern (input size [[1],[1]])
+    {'operator_name': 'aten.ge', 'size': '[[], []]'},
+    {'operator_name': 'aten.ge', 'size': '[[2048], []]'},
+    {'operator_name': 'aten.index', 'size': '[[1, 8192], [1]]'},
+    {'operator_name': 'aten.index', 'size': '[[2048, 8192], [1]]'},
+    {'operator_name': 'aten.log', 'size': '[[1, 32000]]'},
+    # The actual kenel name in the workload is aten::native::legacy (input size [[],[]]), but the following test generates aten::native::modern (input size [[1],[1]])
+    {'operator_name': 'aten.lt', 'size': '[[], []]'},
+    {'operator_name': 'aten.lt', 'size': '[[2048], []]'},
+    {'operator_name': 'aten.masked_fill_', 'size': '[[2048, 8192], [2048, 1], []]'},
+    {'operator_name': 'aten.masked_fill_', 'size': '[[2048], [2048], []]'},
+    {'operator_name': 'aten.sub', 'size': '[[2048], [], []]'}
+  ]
+}

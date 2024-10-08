@@ -18,6 +18,7 @@ import megatron.model
 from megatron.core.models.gpt import GPTModel
 from megatron.training import pretrain
 from megatron.core.transformer.spec_utils import import_module
+from torch.profiler import profile, record_function, ProfilerActivity
 from megatron.utils import (
     get_batch_on_this_cp_rank,
     get_batch_on_this_tp_rank,
@@ -199,7 +200,7 @@ def train_valid_test_datasets_provider(train_val_test_num_samples):
     return train_ds, valid_ds, test_ds
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #(crl + ? key to comment out)
 
     # Temporary for transition to core datasets
     train_valid_test_datasets_provider.is_distributed = True
@@ -209,3 +210,34 @@ if __name__ == "__main__":
              ModelType.encoder_or_decoder,
              forward_step,
              args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+
+# if __name__ == "__main__":
+ 
+#     def trace_handler(p):
+#         rank = torch.distributed.get_rank()
+#         print(p.key_averages().table(sort_by="self_cuda_time_total", row_limit=50))
+#         print(p.key_averages().table(sort_by="cuda_time_total", row_limit=50))
+#         with open(f"log_70B/summary_{rank}.txt", "w") as f:
+#             print(p.key_averages().table(sort_by="self_cuda_time_total", row_limit=-1), file=f)
+#         trace_name = "log_70B/trace_" + str(rank) + ".json"
+#         print(trace_name)
+#         p.export_chrome_trace(trace_name)
+ 
+#     # Temporary for transition to core datasets
+#     train_valid_test_datasets_provider.is_distributed = True
+ 
+#     with profile(
+#         activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+#         #with_stack=True,
+#         # schedule=torch.profiler.schedule(
+#         #     wait=1,
+#         #     warmup=1,
+#         #     active=2),
+#         on_trace_ready=trace_handler
+#     ) as p:
+#         for idx in range(1):
+#             pretrain(train_valid_test_datasets_provider,
+#                      model_provider,
+#                      ModelType.encoder_or_decoder,
+#                      forward_step,
+#                      args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})

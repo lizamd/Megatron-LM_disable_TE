@@ -1,0 +1,398 @@
+W0910 15:57:41.266794 140163587171520 torch/distributed/run.py:778] 
+W0910 15:57:41.266794 140163587171520 torch/distributed/run.py:778] *****************************************
+W0910 15:57:41.266794 140163587171520 torch/distributed/run.py:778] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0910 15:57:41.266794 140163587171520 torch/distributed/run.py:778] *****************************************
+ > number of parameters on (tensor, pipeline) model parallel rank (5, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (6, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (4, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (2, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (7, 1): 4312408064
+ > number of parameters on (tensor, pipeline) model parallel rank (3, 1): 4312408064
+INFO:megatron.core.distributed.grad_buffer:Number of buckets for gradient all-reduce / reduce-scatter: 1
+INFO:megatron.core.distributed.grad_buffer:Params for bucket 1 (4312408064 elements):
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.output_layer.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.12.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.1.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.1.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.12.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.12.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.1.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.1.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.1.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.28.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.2.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.1.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.12.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.0.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.27.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.12.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.final_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.20.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.38.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.34.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.14.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.10.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.36.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.35.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.12.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.11.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.4.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.33.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.25.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.9.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.30.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.26.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.22.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.19.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.6.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.5.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.3.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.24.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.16.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.37.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.32.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.21.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.18.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.17.self_attention.dense.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.13.self_attention.query_key_value.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.8.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.39.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.15.mlp.dense_4h_to_h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.31.mlp.dense_h_to_4h.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.29.post_attention_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.23.input_norm.weight
+INFO:megatron.core.distributed.grad_buffer:    module.language_model.encoder.layers.7.mlp.dense_h_to_4h.weight
+(min, max) time across ranks (ms):
+    load-checkpoint ................................: (2.49, 2.52)
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (152.69, 153.99)
+    train/valid/test-data-iterators-setup ..........: (1318.86, 1682.95)
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+ iteration        1/     100 | consumed samples:           16 | elapsed time per iteration (ms): 52281.3 | throughput per GPU (TFLOP/s/GPU): 28.5 | learning rate: 3.000E-04 | global batch size:    16 | mem usages: 0.4544 | lm loss: 1.202964E+01 | loss scale: 1.0 | grad norm: 110.822 | number of skipped iterations:   0 | number of nan iterations:   0 |
+[Rank 9] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 82578.0 | max reserved: 82578.0[Rank 10] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 82578.0 | max reserved: 82578.0
+
+[Rank 12] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 82578.0 | max reserved: 82578.0
+[Rank 15] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 81554.0 | max reserved: 81554.0
+[Rank 11] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 82578.0 | max reserved: 82578.0
+[Rank 14] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 81554.0 | max reserved: 81554.0
+[Rank 8] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77308.14501953125 | reserved: 82066.0 | max reserved: 82066.0
+[Rank 13] (after 1 iterations) memory (MB) | allocated: 57896.86279296875 | max allocated: 77307.89501953125 | reserved: 82066.0 | max reserved: 82066.0
+ iteration        2/     100 | consumed samples:           32 | elapsed time per iteration (ms): 8052.1 | throughput per GPU (TFLOP/s/GPU): 185.2 | learning rate: 2.999E-04 | global batch size:    16 | mem usages: 0.5331 | lm loss: 1.203186E+01 | loss scale: 1.0 | grad norm: 110.938 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        3/     100 | consumed samples:           48 | elapsed time per iteration (ms): 8077.4 | throughput per GPU (TFLOP/s/GPU): 184.6 | learning rate: 2.997E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202509E+01 | loss scale: 1.0 | grad norm: 110.982 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        4/     100 | consumed samples:           64 | elapsed time per iteration (ms): 8062.5 | throughput per GPU (TFLOP/s/GPU): 184.9 | learning rate: 2.994E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202661E+01 | loss scale: 1.0 | grad norm: 110.895 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        5/     100 | consumed samples:           80 | elapsed time per iteration (ms): 8115.1 | throughput per GPU (TFLOP/s/GPU): 183.7 | learning rate: 2.989E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203788E+01 | loss scale: 1.0 | grad norm: 110.931 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        6/     100 | consumed samples:           96 | elapsed time per iteration (ms): 8133.4 | throughput per GPU (TFLOP/s/GPU): 183.3 | learning rate: 2.983E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202794E+01 | loss scale: 1.0 | grad norm: 110.900 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        7/     100 | consumed samples:          112 | elapsed time per iteration (ms): 8145.3 | throughput per GPU (TFLOP/s/GPU): 183.0 | learning rate: 2.976E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203671E+01 | loss scale: 1.0 | grad norm: 110.965 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        8/     100 | consumed samples:          128 | elapsed time per iteration (ms): 8120.9 | throughput per GPU (TFLOP/s/GPU): 183.6 | learning rate: 2.967E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203454E+01 | loss scale: 1.0 | grad norm: 110.954 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration        9/     100 | consumed samples:          144 | elapsed time per iteration (ms): 8158.4 | throughput per GPU (TFLOP/s/GPU): 182.7 | learning rate: 2.957E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203693E+01 | loss scale: 1.0 | grad norm: 110.920 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       10/     100 | consumed samples:          160 | elapsed time per iteration (ms): 8170.3 | throughput per GPU (TFLOP/s/GPU): 182.5 | learning rate: 2.945E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203521E+01 | loss scale: 1.0 | grad norm: 110.922 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       11/     100 | consumed samples:          176 | elapsed time per iteration (ms): 8276.4 | throughput per GPU (TFLOP/s/GPU): 180.1 | learning rate: 2.933E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203332E+01 | loss scale: 1.0 | grad norm: 110.933 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       12/     100 | consumed samples:          192 | elapsed time per iteration (ms): 8154.4 | throughput per GPU (TFLOP/s/GPU): 182.8 | learning rate: 2.919E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.203029E+01 | loss scale: 1.0 | grad norm: 110.854 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       13/     100 | consumed samples:          208 | elapsed time per iteration (ms): 8171.9 | throughput per GPU (TFLOP/s/GPU): 182.4 | learning rate: 2.903E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202109E+01 | loss scale: 1.0 | grad norm: 110.915 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       14/     100 | consumed samples:          224 | elapsed time per iteration (ms): 8195.8 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 2.887E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202480E+01 | loss scale: 1.0 | grad norm: 110.947 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       15/     100 | consumed samples:          240 | elapsed time per iteration (ms): 8205.6 | throughput per GPU (TFLOP/s/GPU): 181.7 | learning rate: 2.869E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202200E+01 | loss scale: 1.0 | grad norm: 110.864 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       16/     100 | consumed samples:          256 | elapsed time per iteration (ms): 8172.9 | throughput per GPU (TFLOP/s/GPU): 182.4 | learning rate: 2.850E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.198762E+01 | loss scale: 1.0 | grad norm: 110.750 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       17/     100 | consumed samples:          272 | elapsed time per iteration (ms): 8202.0 | throughput per GPU (TFLOP/s/GPU): 181.8 | learning rate: 2.830E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.199869E+01 | loss scale: 1.0 | grad norm: 110.528 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       18/     100 | consumed samples:          288 | elapsed time per iteration (ms): 8318.0 | throughput per GPU (TFLOP/s/GPU): 179.2 | learning rate: 2.808E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.198128E+01 | loss scale: 1.0 | grad norm: 110.257 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       19/     100 | consumed samples:          304 | elapsed time per iteration (ms): 8223.1 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 2.786E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.198556E+01 | loss scale: 1.0 | grad norm: 110.099 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       20/     100 | consumed samples:          320 | elapsed time per iteration (ms): 8195.7 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 2.762E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.197969E+01 | loss scale: 1.0 | grad norm: 109.900 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       21/     100 | consumed samples:          336 | elapsed time per iteration (ms): 8195.6 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 2.737E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.199424E+01 | loss scale: 1.0 | grad norm: 193.924 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       22/     100 | consumed samples:          352 | elapsed time per iteration (ms): 8213.5 | throughput per GPU (TFLOP/s/GPU): 181.5 | learning rate: 2.711E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.197145E+01 | loss scale: 1.0 | grad norm: 109.423 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       23/     100 | consumed samples:          368 | elapsed time per iteration (ms): 8228.1 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 2.684E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.199593E+01 | loss scale: 1.0 | grad norm: 109.326 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       24/     100 | consumed samples:          384 | elapsed time per iteration (ms): 8203.4 | throughput per GPU (TFLOP/s/GPU): 181.7 | learning rate: 2.656E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.200171E+01 | loss scale: 1.0 | grad norm: 109.381 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       25/     100 | consumed samples:          400 | elapsed time per iteration (ms): 8204.3 | throughput per GPU (TFLOP/s/GPU): 181.7 | learning rate: 2.627E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.199880E+01 | loss scale: 1.0 | grad norm: 109.341 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       26/     100 | consumed samples:          416 | elapsed time per iteration (ms): 8221.3 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 2.597E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.200723E+01 | loss scale: 1.0 | grad norm: 109.378 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       27/     100 | consumed samples:          432 | elapsed time per iteration (ms): 8246.5 | throughput per GPU (TFLOP/s/GPU): 180.8 | learning rate: 2.566E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.200115E+01 | loss scale: 1.0 | grad norm: 109.343 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       28/     100 | consumed samples:          448 | elapsed time per iteration (ms): 8205.0 | throughput per GPU (TFLOP/s/GPU): 181.7 | learning rate: 2.534E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.200428E+01 | loss scale: 1.0 | grad norm: 109.367 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       29/     100 | consumed samples:          464 | elapsed time per iteration (ms): 8211.6 | throughput per GPU (TFLOP/s/GPU): 181.6 | learning rate: 2.501E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.202142E+01 | loss scale: 1.0 | grad norm: 109.369 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       30/     100 | consumed samples:          480 | elapsed time per iteration (ms): 8225.3 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 2.468E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.200048E+01 | loss scale: 1.0 | grad norm: 109.330 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       31/     100 | consumed samples:          496 | elapsed time per iteration (ms): 8243.7 | throughput per GPU (TFLOP/s/GPU): 180.9 | learning rate: 2.433E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.198367E+01 | loss scale: 1.0 | grad norm: 109.357 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       32/     100 | consumed samples:          512 | elapsed time per iteration (ms): 8208.1 | throughput per GPU (TFLOP/s/GPU): 181.6 | learning rate: 2.398E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.197870E+01 | loss scale: 1.0 | grad norm: 109.284 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       33/     100 | consumed samples:          528 | elapsed time per iteration (ms): 8228.2 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 2.362E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.198423E+01 | loss scale: 1.0 | grad norm: 109.268 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       34/     100 | consumed samples:          544 | elapsed time per iteration (ms): 8232.5 | throughput per GPU (TFLOP/s/GPU): 181.1 | learning rate: 2.325E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.196936E+01 | loss scale: 1.0 | grad norm: 109.129 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       35/     100 | consumed samples:          560 | elapsed time per iteration (ms): 8240.2 | throughput per GPU (TFLOP/s/GPU): 180.9 | learning rate: 2.288E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.197206E+01 | loss scale: 1.0 | grad norm: 109.031 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       36/     100 | consumed samples:          576 | elapsed time per iteration (ms): 8224.8 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 2.249E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.195895E+01 | loss scale: 1.0 | grad norm: 109.042 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       37/     100 | consumed samples:          592 | elapsed time per iteration (ms): 8222.2 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 2.211E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.198870E+01 | loss scale: 1.0 | grad norm: 109.021 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       38/     100 | consumed samples:          608 | elapsed time per iteration (ms): 8222.3 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 2.172E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.197743E+01 | loss scale: 1.0 | grad norm: 108.914 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       39/     100 | consumed samples:          624 | elapsed time per iteration (ms): 8244.4 | throughput per GPU (TFLOP/s/GPU): 180.8 | learning rate: 2.132E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.196827E+01 | loss scale: 1.0 | grad norm: 108.850 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       40/     100 | consumed samples:          640 | elapsed time per iteration (ms): 8217.5 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 2.092E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.195960E+01 | loss scale: 1.0 | grad norm: 108.883 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       41/     100 | consumed samples:          656 | elapsed time per iteration (ms): 8212.5 | throughput per GPU (TFLOP/s/GPU): 181.5 | learning rate: 2.051E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.197118E+01 | loss scale: 1.0 | grad norm: 108.655 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       42/     100 | consumed samples:          672 | elapsed time per iteration (ms): 8222.1 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 2.010E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.196662E+01 | loss scale: 1.0 | grad norm: 108.667 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       43/     100 | consumed samples:          688 | elapsed time per iteration (ms): 8223.0 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 1.968E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.195631E+01 | loss scale: 1.0 | grad norm: 108.545 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       44/     100 | consumed samples:          704 | elapsed time per iteration (ms): 8195.5 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 1.926E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.195026E+01 | loss scale: 1.0 | grad norm: 108.679 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       45/     100 | consumed samples:          720 | elapsed time per iteration (ms): 8192.2 | throughput per GPU (TFLOP/s/GPU): 182.0 | learning rate: 1.884E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194908E+01 | loss scale: 1.0 | grad norm: 108.561 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       46/     100 | consumed samples:          736 | elapsed time per iteration (ms): 8222.2 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 1.842E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.195530E+01 | loss scale: 1.0 | grad norm: 108.565 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       47/     100 | consumed samples:          752 | elapsed time per iteration (ms): 8216.3 | throughput per GPU (TFLOP/s/GPU): 181.5 | learning rate: 1.800E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.195232E+01 | loss scale: 1.0 | grad norm: 108.406 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       48/     100 | consumed samples:          768 | elapsed time per iteration (ms): 8210.3 | throughput per GPU (TFLOP/s/GPU): 181.6 | learning rate: 1.757E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193597E+01 | loss scale: 1.0 | grad norm: 108.381 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       49/     100 | consumed samples:          784 | elapsed time per iteration (ms): 8200.3 | throughput per GPU (TFLOP/s/GPU): 181.8 | learning rate: 1.714E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194236E+01 | 6a4c13ad14d88-GPTDataset-shuffle_index.npy
+INFO:megatron.core.datasets.gpt_dataset:> total number of samples: 281
+INFO:megatron.core.datasets.gpt_dataset:> total number of epochs: 1
+> finished creating GPT datasets ...
+[after dataloaders are built] datetime: 2024-09-10 15:57:54 
+done with setup ...
+training ...
+[before the start of training step] datetime: 2024-09-10 15:57:54 
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+WARNING:megatron.core.models.common.embeddings.rotary_pos_embedding:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+[Rank 2] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 117696.0 | max reserved: 117696.0[Rank 1] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 118208.0 | max reserved: 118208.0
+
+[Rank 3] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 117856.0 | max reserved: 117856.0
+[Rank 7] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 117696.0 | max reserved: 117696.0
+[Rank 4] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 117856.0 | max reserved: 117856.0
+[Rank 5] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 117856.0 | max reserved: 117856.0[Rank 6] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.11279296875 | reserved: 117696.0 | max reserved: 117696.0
+
+[Rank 0] (after 1 iterations) memory (MB) | allocated: 57832.75244140625 | max allocated: 111378.30029296875 | reserved: 117696.0 | max reserved: 117696.0
+[after training is done] datetime: 2024-09-10 16:12:20 
+grad norm: 107.732 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       59/     100 | consumed samples:          944 | elapsed time per iteration (ms): 8241.0 | throughput per GPU (TFLOP/s/GPU): 180.9 | learning rate: 1.290E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191246E+01 | loss scale: 1.0 | grad norm: 107.753 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       60/     100 | consumed samples:          960 | elapsed time per iteration (ms): 8254.5 | throughput per GPU (TFLOP/s/GPU): 180.6 | learning rate: 1.249E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.190566E+01 | loss scale: 1.0 | grad norm: 107.452 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       61/     100 | consumed samples:          976 | elapsed time per iteration (ms): 8218.1 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 1.208E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191696E+01 | loss scale: 1.0 | grad norm: 107.530 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       62/     100 | consumed samples:          992 | elapsed time per iteration (ms): 8233.0 | throughput per GPU (TFLOP/s/GPU): 181.1 | learning rate: 1.168E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192430E+01 | loss scale: 1.0 | grad norm: 107.527 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       63/     100 | consumed samples:         1008 | elapsed time per iteration (ms): 8243.2 | throughput per GPU (TFLOP/s/GPU): 180.9 | learning rate: 1.128E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192510E+01 | loss scale: 1.0 | grad norm: 107.496 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       64/     100 | consumed samples:         1024 | elapsed time per iteration (ms): 8237.2 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 1.089E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193653E+01 | loss scale: 1.0 | grad norm: 107.523 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       65/     100 | consumed samples:         1040 | elapsed time per iteration (ms): 8197.4 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 1.051E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193233E+01 | loss scale: 1.0 | grad norm: 107.485 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       66/     100 | consumed samples:         1056 | elapsed time per iteration (ms): 8219.8 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 1.012E-04 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193665E+01 | loss scale: 1.0 | grad norm: 107.439 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       67/     100 | consumed samples:         1072 | elapsed time per iteration (ms): 8241.3 | throughput per GPU (TFLOP/s/GPU): 180.9 | learning rate: 9.750E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193893E+01 | loss scale: 1.0 | grad norm: 107.514 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       68/     100 | consumed samples:         1088 | elapsed time per iteration (ms): 8237.2 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 9.382E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194058E+01 | loss scale: 1.0 | grad norm: 107.374 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       69/     100 | consumed samples:         1104 | elapsed time per iteration (ms): 8196.9 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 9.022E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194420E+01 | loss scale: 1.0 | grad norm: 107.437 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       70/     100 | consumed samples:         1120 | elapsed time per iteration (ms): 8235.8 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 8.669E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194303E+01 | loss scale: 1.0 | grad norm: 107.378 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       71/     100 | consumed samples:         1136 | elapsed time per iteration (ms): 8232.9 | throughput per GPU (TFLOP/s/GPU): 181.1 | learning rate: 8.324E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194235E+01 | loss scale: 1.0 | grad norm: 107.274 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       72/     100 | consumed samples:         1152 | elapsed time per iteration (ms): 8231.1 | throughput per GPU (TFLOP/s/GPU): 181.1 | learning rate: 7.988E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194322E+01 | loss scale: 1.0 | grad norm: 107.377 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       73/     100 | consumed samples:         1168 | elapsed time per iteration (ms): 8196.6 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 7.659E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192211E+01 | loss scale: 1.0 | grad norm: 107.326 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       74/     100 | consumed samples:         1184 | elapsed time per iteration (ms): 8220.1 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 7.340E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193494E+01 | loss scale: 1.0 | grad norm: 107.391 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       75/     100 | consumed samples:         1200 | elapsed time per iteration (ms): 8229.5 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 7.030E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193595E+01 | loss scale: 1.0 | grad norm: 107.311 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       76/     100 | consumed samples:         1216 | elapsed time per iteration (ms): 8244.7 | throughput per GPU (TFLOP/s/GPU): 180.8 | learning rate: 6.730E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193579E+01 | loss scale: 1.0 | grad norm: 107.376 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       77/     100 | consumed samples:         1232 | elapsed time per iteration (ms): 8196.3 | throughput per GPU (TFLOP/s/GPU): 181.9 | learning rate: 6.439E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192267E+01 | loss scale: 1.0 | grad norm: 107.348 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       78/     100 | consumed samples:         1248 | elapsed time per iteration (ms): 8224.1 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 6.158E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193496E+01 | loss scale: 1.0 | grad norm: 107.271 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       79/     100 | consumed samples:         1264 | elapsed time per iteration (ms): 8237.1 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 5.888E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191238E+01 | loss scale: 1.0 | grad norm: 107.290 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       80/     100 | consumed samples:         1280 | elapsed time per iteration (ms): 8252.6 | throughput per GPU (TFLOP/s/GPU): 180.7 | learning rate: 5.629E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.193515E+01 | loss scale: 1.0 | grad norm: 107.283 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       81/     100 | consumed samples:         1296 | elapsed time per iteration (ms): 8212.5 | throughput per GPU (TFLOP/s/GPU): 181.5 | learning rate: 5.380E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.194306E+01 | loss scale: 1.0 | grad norm: 107.210 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       82/     100 | consumed samples:         1312 | elapsed time per iteration (ms): 8237.7 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 5.143E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191944E+01 | loss scale: 1.0 | grad norm: 107.305 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       83/     100 | consumed samples:         1328 | elapsed time per iteration (ms): 8230.0 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 4.917E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192572E+01 | loss scale: 1.0 | grad norm: 107.224 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       84/     100 | consumed samples:         1344 | elapsed time per iteration (ms): 8249.2 | throughput per GPU (TFLOP/s/GPU): 180.7 | learning rate: 4.703E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192137E+01 | loss scale: 1.0 | grad norm: 107.286 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       85/     100 | consumed samples:         1360 | elapsed time per iteration (ms): 8228.4 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 4.501E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192400E+01 | loss scale: 1.0 | grad norm: 107.332 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       86/     100 | consumed samples:         1376 | elapsed time per iteration (ms): 8227.0 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 4.310E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191652E+01 | loss scale: 1.0 | grad norm: 107.179 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       87/     100 | consumed samples:         1392 | elapsed time per iteration (ms): 8235.5 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 4.133E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192470E+01 | loss scale: 1.0 | grad norm: 107.234 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       88/     100 | consumed samples:         1408 | elapsed time per iteration (ms): 8244.1 | throughput per GPU (TFLOP/s/GPU): 180.8 | learning rate: 3.967E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191939E+01 | loss scale: 1.0 | grad norm: 107.241 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       89/     100 | consumed samples:         1424 | elapsed time per iteration (ms): 8214.7 | throughput per GPU (TFLOP/s/GPU): 181.5 | learning rate: 3.814E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191735E+01 | loss scale: 1.0 | grad norm: 107.260 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       90/     100 | consumed samples:         1440 | elapsed time per iteration (ms): 8231.6 | throughput per GPU (TFLOP/s/GPU): 181.1 | learning rate: 3.674E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192057E+01 | loss scale: 1.0 | grad norm: 107.213 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       91/     100 | consumed samples:         1456 | elapsed time per iteration (ms): 8236.3 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 3.547E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.190618E+01 | loss scale: 1.0 | grad norm: 107.161 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       92/     100 | consumed samples:         1472 | elapsed time per iteration (ms): 8252.0 | throughput per GPU (TFLOP/s/GPU): 180.7 | learning rate: 3.433E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191349E+01 | loss scale: 1.0 | grad norm: 107.153 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       93/     100 | consumed samples:         1488 | elapsed time per iteration (ms): 8210.1 | throughput per GPU (TFLOP/s/GPU): 181.6 | learning rate: 3.332E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191245E+01 | loss scale: 1.0 | grad norm: 107.177 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       94/     100 | consumed samples:         1504 | elapsed time per iteration (ms): 8227.8 | throughput per GPU (TFLOP/s/GPU): 181.2 | learning rate: 3.244E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.192252E+01 | loss scale: 1.0 | grad norm: 107.228 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       95/     100 | consumed samples:         1520 | elapsed time per iteration (ms): 8225.7 | throughput per GPU (TFLOP/s/GPU): 181.3 | learning rate: 3.170E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.190661E+01 | loss scale: 1.0 | grad norm: 107.219 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       96/     100 | consumed samples:         1536 | elapsed time per iteration (ms): 8242.5 | throughput per GPU (TFLOP/s/GPU): 180.9 | learning rate: 3.109E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.189816E+01 | loss scale: 1.0 | grad norm: 107.175 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       97/     100 | consumed samples:         1552 | elapsed time per iteration (ms): 8220.1 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 3.061E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191720E+01 | loss scale: 1.0 | grad norm: 107.009 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       98/     100 | consumed samples:         1568 | elapsed time per iteration (ms): 8218.1 | throughput per GPU (TFLOP/s/GPU): 181.4 | learning rate: 3.027E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.190691E+01 | loss scale: 1.0 | grad norm: 107.134 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration       99/     100 | consumed samples:         1584 | elapsed time per iteration (ms): 8238.9 | throughput per GPU (TFLOP/s/GPU): 181.0 | learning rate: 3.007E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191293E+01 | loss scale: 1.0 | grad norm: 107.023 | number of skipped iterations:   0 | number of nan iterations:   0 |
+ iteration      100/     100 | consumed samples:         1600 | elapsed time per iteration (ms): 8257.8 | throughput per GPU (TFLOP/s/GPU): 180.5 | learning rate: 3.000E-05 | global batch size:    16 | mem usages: 0.5357 | lm loss: 1.191056E+01 | loss scale: 1.0 | grad norm: 107.103 | number of skipped iterations:   0 | number of nan iterations:   0 |
+throughput per GPU: 181.54943820224722
+elapsed time per iteration: 8212.210112359551
+tokens/GPU/s: 498.769508
+tokens/GPU/s: 498.769508
+mem usages: 0.5356707865168541

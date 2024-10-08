@@ -1,0 +1,28 @@
+name: Linter
+on: [pull_request]
+jobs:
+  ruff_black:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: install dependancies
+        run: pip3 install ruff black
+      - name: install reviewdog
+        uses: reviewdog/action-setup@v1
+      - name: ruff
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ruff check . -e | reviewdog -efm="%f:%l:%c: %m" -diff="git diff FETCH_HEAD" -reporter=github-pr-check -tee
+      # Can swap to this, if the repo is formatted, current output too long.
+      #- name: black
+      #  env:
+      #    REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  run: |
+      #    black --check . | reviewdog -f="diff" -reporter=github-pr-check -tee
+
+

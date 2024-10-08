@@ -1,0 +1,29 @@
+1000 warmups
+Set device to 0 : AMD Instinct MI300X
+Legend: unp - unpinned(malloc), hM - hipMalloc(device)
+        hHR - hipHostRegister(pinned), hHM - hipHostMalloc(prePinned)
+----- Global buffer (MiB): 128
+HIPPerfBufferCopySpeed[0]	(    4096 bytes)	s:hM d:hM	i:1000	(GB/s) perf	2.950552, time per iter(us):	2.8
+HIPPerfBufferCopySpeed[1]	(    8192 bytes)	s:hM d:hM	i:1000	(GB/s) perf	6.049243, time per iter(us):	2.7
+HIPPerfBufferCopySpeed[2]	(   65536 bytes)	s:hM d:hM	i:1000	(GB/s) perf	44.806591, time per iter(us):	2.9
+HIPPerfBufferCopySpeed[3]	(  262144 bytes)	s:hM d:hM	i:1000	(GB/s) perf	171.568008, time per iter(us):	3.1
+HIPPerfBufferCopySpeed[4]	(  524288 bytes)	s:hM d:hM	i:1000	(GB/s) perf	312.253235, time per iter(us):	3.4
+HIPPerfBufferCopySpeed[5]	( 1048576 bytes)	s:hM d:hM	i:1000	(GB/s) perf	536.095642, time per iter(us):	3.9
+HIPPerfBufferCopySpeed[6]	( 4194304 bytes)	s:hM d:hM	i:1000	(GB/s) perf	1344.236694, time per iter(us):	6.2
+HIPPerfBufferCopySpeed[7]	(16777216 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3223.176025, time per iter(us):	10.4
+HIPPerfBufferCopySpeed[8]	(16777226 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3159.279297, time per iter(us):	10.6
+HIPPerfBufferCopySpeed[9]	(33554432 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3584.431641, time per iter(us):	18.7
+HIPPerfBufferCopySpeed[10]	(67108864 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3795.305664, time per iter(us):	35.4
+----- Global buffer (MiB): 1024
+HIPPerfBufferCopySpeed[0]	(    4096 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3.112328, time per iter(us):	2.6
+HIPPerfBufferCopySpeed[1]	(    8192 bytes)	s:hM d:hM	i:1000	(GB/s) perf	6.017382, time per iter(us):	2.7
+HIPPerfBufferCopySpeed[2]	(   65536 bytes)	s:hM d:hM	i:1000	(GB/s) perf	44.070732, time per iter(us):	3.0
+HIPPerfBufferCopySpeed[3]	(  262144 bytes)	s:hM d:hM	i:1000	(GB/s) perf	155.017059, time per iter(us):	3.4
+HIPPerfBufferCopySpeed[4]	(  524288 bytes)	s:hM d:hM	i:1000	(GB/s) perf	255.663879, time per iter(us):	4.1
+HIPPerfBufferCopySpeed[5]	( 1048576 bytes)	s:hM d:hM	i:1000	(GB/s) perf	483.744537, time per iter(us):	4.3
+HIPPerfBufferCopySpeed[6]	( 4194304 bytes)	s:hM d:hM	i:1000	(GB/s) perf	1298.965942, time per iter(us):	6.5
+HIPPerfBufferCopySpeed[7]	(16777216 bytes)	s:hM d:hM	i:1000	(GB/s) perf	2995.317627, time per iter(us):	11.2
+HIPPerfBufferCopySpeed[8]	(16777226 bytes)	s:hM d:hM	i:1000	(GB/s) perf	2793.158447, time per iter(us):	12.0
+HIPPerfBufferCopySpeed[9]	(33554432 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3356.459961, time per iter(us):	20.0
+HIPPerfBufferCopySpeed[10]	(67108864 bytes)	s:hM d:hM	i:1000	(GB/s) perf	3621.074951, time per iter(us):	37.1
+[32mPASSED![0m

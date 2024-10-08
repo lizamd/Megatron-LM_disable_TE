@@ -1,0 +1,8 @@
+--ReduceOp SUM --all_reduce_dim 16384 --dtype fp16
+--ReduceOp SUM --all_reduce_dim 16384 --dtype bf16
+--ReduceOp PRODUCT --all_reduce_dim 16384 --dtype fp16
+--ReduceOp PRODUCT --all_reduce_dim 16384 --dtype bf16
+--ReduceOp MAX --all_reduce_dim 16384 --dtype fp16
+--ReduceOp MAX --all_reduce_dim 16384 --dtype bf16
+--ReduceOp MIN --all_reduce_dim 16384 --dtype fp16
+--ReduceOp MIN --all_reduce_dim 16384 --dtype bf16

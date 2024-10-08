@@ -1,0 +1,21 @@
+top5:
+  args:
+   - --batch_size_list "1" --input_size_list "14" --kernel_size_list "3" --stride_list "2" --input_channels_list "192" --output_channels_list "192" --padding_list "2"
+   - --batch_size_list "1" --input_size_list "28" --kernel_size_list "1" --stride_list "2" --input_channels_list "192" --output_channels_list "192" --padding_list "1"
+   - --batch_size_list "1" --input_size_list "56" --kernel_size_list "1" --stride_list "1" --input_channels_list "192" --output_channels_list "192" --padding_list "2"
+   - --batch_size_list "256" --input_size_list "244" --kernel_size_list "3" --stride_list "2" --input_channels_list "192" --output_channels_list "192" --padding_list "1"
+   - --batch_size_list "512" --input_size_list "244" --kernel_size_list "3" --stride_list "1" --input_channels_list "192" --output_channels_list "192" --padding_list "2"
+   
+scan:
+ args:
+   - --batch_size_list "1 2 4 64 128 256" --input_size_list "14 28 56 224" --kernel_size_list "1 2" --stride_list "1 2" --input_channels_list "192" --output_channels_list "192" --padding_list "1 2"
+
+### Inspired by fambench cvt
+cvt:
+  args:
+   - --batch_size_list "11 21 32 128" --input_size_list "14 28 56 224" --kernel_size_list "3 7" --stride_list "1 2 4" --input_channels_list "3 64 192 384" --output_channels_list "64 192 384" --padding_list "1 2"
+
+### Inspired by fambench oscar
+oscar:
+    args:
+     - --batch_size_list "1" --input_size_list "1000" --kernel_size_list "3" --stride_list "1 2" --padding_list "0 1" --input_channels_list "80 1280" --output_channels_list "1280"

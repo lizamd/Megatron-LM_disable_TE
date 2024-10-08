@@ -1,0 +1,3 @@
+FROM rocm/pytorch:latest
+WORKDIR /root
+ADD . /root
